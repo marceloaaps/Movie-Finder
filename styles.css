@@ -1,0 +1,210 @@
+/* 
+Seguintes cores em hexcode:
+Cor Principal (Preto) -#0e0f12
+Cor Secundária (Cinza escuro) - #303030
+Botões/interações (Vermelho) - #e50914
+Hover nos botões, etc (Vermelho mais escuro) - #c11119
+Vermelho Onclick - #99161d */
+
+
+#background {
+    background-color: #0e0f12;
+}
+
+.slideOne {
+    display: flex;
+    height: 80vh;
+}
+
+#slideOneBG {
+    position: absolute;
+    height: 100vh;
+}
+
+
+.infos {
+    z-index: 1;
+    width: 50vh;
+    height: 40vh;
+    align-self: center;
+    margin: 15vh 0vh -25vh 35vh;
+}
+
+.movieName {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    font-size: 6VH;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.movieText {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    font-size: 3VH;
+    font-family: 'Franklin Gothic Small', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 4vh;
+}
+
+.bg-custom-red {
+    background-color: #5f1104;
+}
+
+.carousel-inner {
+    height: 94vh;
+}
+
+.carousel-item img {
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* Mantém a proporção da imagem e cobre todo o espaço */
+}
+
+
+#p {
+    font-size: 4vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 1vh;
+    justify-self: bottom;
+    color: rgb(255, 255, 255);
+}
+
+
+.animated-button:focus {
+    outline: none; 
+}
+
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: #e50914;
+    border-radius: 100px;
+    font-weight: 600;
+    color: black;
+    box-shadow: 0 0 0 2px #c11119;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #ffffff;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+    right: 16px;
+}
+
+.animated-button .arr-2 {
+    left: -25%;
+}
+
+
+.animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #c11119;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+    right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+    left: 16px;
+}
+
+.animated-button:hover .text {
+    transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+    fill: #212121;
+}
+
+.animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px rgb(2, 2, 2);
+}
+
+.animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+}
+.containerThings {
+    display: flex;
+    flex-direction: column;
+    height: 300vh;
+    margin: 10vh 5vh 10vh 5vh;
+    background-color: #0e0f12;
+  }
+  
+  .movies-scroller {
+    display: flex; /* Make movies scrollable horizontally */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    width: 100%; /* Make scroller fill container width */
+    white-space: nowrap; /* Prevent content from wrapping */
+  }
+  
+  .moviebox {
+    
+    display: flex;
+    /* Removed unnecessary properties like justify-self */
+    border-radius: 10px;
+    height: 38vh;
+    width: 250vh; /* Adjust width for multiple movies per screen */
+    background-color: #303030;
+    margin-bottom: 4vh;
+  }
+  
+  .movieMiniName {
+    position: relative;
+    color: white; /* Assuming white text on dark background */
+    font-size: 18px; /* Adjust font size for better readability */
+
+  }
+  
+  .miniImg {
+    /* Adjust styles as needed for better appearance within moviebox */
+    border-radius: 10px;
+    margin: 2vh; /* Adjust margins for spacing */
+    width: 30vh; /* Adjust image width to fit within moviebox */
+    height: 30vh; /* Adjust image height to fit within moviebox */
+  }
+  
