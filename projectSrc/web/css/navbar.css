@@ -2,8 +2,8 @@
 Seguintes cores em hexcode:
 Cor Principal (Preto) -#0e0f12
 Cor Secundária (Cinza escuro) - #303030
-Botões/interações (Vermelho) - #e50914
-Hover nos botões, etc (Vermelho mais escuro) - #c11119
+Botões/interações (Vermelho) - #ec11119
+Hover nos botões, etc (Vermelho mais escuro) - rgb(53, 53, 53)
 Vermelho Onclick - #99161d */
 
 .buttone {
@@ -75,8 +75,69 @@ Vermelho Onclick - #99161d */
   background-color: rgb(139, 10, 10);
   transform: scale(1.1);
 }
+
 .navbar-toggler:focus{
     outline: none;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+}
 
+.caixa-search {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(53, 53, 53);
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.caixa-search:hover > .caixa-texto {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.caixa-search:hover > .botao-search {
+  background-color: #ec0f0f;
+  margin-left: 3px;
+}
+
+.botao-search {
+  color: #000000;
+  float: right;
+  position: re;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(53, 53, 53);
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  transition: 0.4s;
+  margin-top: -10px;
+}
+
+.botao-search:hover{
+  color: rgb(211, 210, 210);
+}
+
+.caixa-texto {
+  border: none;
+  background-color: rgb(53, 53, 53);
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  cursor: pointer;
+  margin-top: -10px;
+}
