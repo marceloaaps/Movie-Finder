@@ -10,7 +10,7 @@ Vermelho Onclick - #99161d */
     color: white;
     outline: none;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 16px;
     border: none;
     background: none;
     font-weight: 600;
@@ -18,6 +18,10 @@ Vermelho Onclick - #99161d */
     margin-top: 10px;
   }
   
+  .bg-custom-red {
+    background-color: #5f1104;
+}
+
   .buttone::before {
     margin-left: auto;
   }

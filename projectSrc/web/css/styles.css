@@ -7,6 +7,7 @@ Hover nos botões, etc (Vermelho mais escuro) - #c11119
 Vermelho Onclick - #99161d */
 
 
+
 #background {
     background-color: #0e0f12;
 }
@@ -49,9 +50,6 @@ Vermelho Onclick - #99161d */
     line-height: 4vh;
 }
 
-.bg-custom-red {
-    background-color: #5f1104;
-}
 
 .carousel-inner {
     height: 94vh;
@@ -69,14 +67,21 @@ Vermelho Onclick - #99161d */
 #p {
     font-size: 4vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 1vh;
+    margin: 3vh 1vh 1vh 1vh;
     justify-self: bottom;
     color: rgb(255, 255, 255);
 }
 
 
+.p2{
+    color: white;
+    font-size: 5vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
 .animated-button:focus {
-    outline: none; 
+    outline: none;
 }
 
 .animated-button {
@@ -167,44 +172,84 @@ Vermelho Onclick - #99161d */
     height: 220px;
     opacity: 1;
 }
+
 .containerThings {
     display: flex;
     flex-direction: column;
-    height: 300vh;
-    margin: 10vh 5vh 10vh 5vh;
+    height: 320vh;
+    margin: 5vh 5vh 10vh 5vh;
     background-color: #0e0f12;
-  }
-  
-  .movies-scroller {
-    display: flex; /* Make movies scrollable horizontally */
-    overflow-x: scroll; /* Enable horizontal scrolling */
-    width: 100%; /* Make scroller fill container width */
-    white-space: nowrap; /* Prevent content from wrapping */
-  }
-  
-  .moviebox {
-    
-    display: flex;
-    /* Removed unnecessary properties like justify-self */
-    border-radius: 10px;
-    height: 38vh;
-    width: 250vh; /* Adjust width for multiple movies per screen */
-    background-color: #303030;
-    margin-bottom: 4vh;
-  }
-  
-  .movieMiniName {
-    position: relative;
-    color: white; /* Assuming white text on dark background */
-    font-size: 18px; /* Adjust font size for better readability */
+}
 
-  }
-  
-  .miniImg {
-    /* Adjust styles as needed for better appearance within moviebox */
+.movies-scroller {
+    display: flex;
+    /* Make movies scrollable horizontally */
+    overflow-x: scroll;
+    /* Enable horizontal scrolling */
+    width: 100%;
+    /* Make scroller fill container width */
+    white-space: nowrap;
+    /* Prevent content from wrapping */
+}
+
+.moviebox {
+    margin: 2vh;
+    display: flex;
+    flex-direction: column;
+    width: 250vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.movieBlock {
+
+    background-color: #212121;
+}
+
+.movieMiniName {
+    margin: 4px 0px -2px 0px;
+    color: white;
+    max-width: 31vh;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    white-space: normal;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.movieGenre {
+    font-family: 'Franklin Gothic Small', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.miniImg {
     border-radius: 10px;
-    margin: 2vh; /* Adjust margins for spacing */
-    width: 30vh; /* Adjust image width to fit within moviebox */
-    height: 30vh; /* Adjust image height to fit within moviebox */
-  }
-  
+    width: 30vh;
+    height: 30vh;
+}
+
+.movies-scroller::-webkit-scrollbar {
+    width: 10px;
+    /* Adjust width as desired */
+    height: 10px;
+    /* Adjust height as desired */
+    background-color: #303030;
+    /* Background color for scrollbar track */
+}
+
+.movies-scroller::-webkit-scrollbar-thumb {
+    background-color: #808080;
+    /* Background color for scrollbar thumb */
+    border-radius: 5px;
+    /* Add rounded corners */
+    cursor: pointer;
+}
+
+.movies-scroller::-webkit-scrollbar-thumb:hover {
+    background-color: #646464;
+    /* Background color for scrollbar thumb */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
