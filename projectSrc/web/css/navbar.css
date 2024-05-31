@@ -80,64 +80,56 @@ Vermelho Onclick - #99161d */
     outline: none;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #ccc;
+.containerSearch{
+  align-self: right;
+  justify-self: right;
+  height: 6vh;
+  width: 50%;
 }
-
-.caixa-search {
-  position: absolute;
-  top: 50%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  background-color: rgb(53, 53, 53);
-  height: 40px;
+  .search{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 4vh;
+  background-color: #e9caca;
   border-radius: 40px;
-  padding: 10px;
-}
+  padding: 5px;
+  }
 
-.caixa-search:hover > .caixa-texto {
-  width: 240px;
-  padding: 0 6px;
-}
+  .search_input{
+  color: rgb(0, 0, 0);
+  border: 0;
+  outline: 0;
+  background: none;
+  margin-top: -40px;
+  caret-color:transparent;
+  transition: width 0.4s linear;
+  }
 
-.caixa-search:hover > .botao-search {
-  background-color: #ec0f0f;
-  margin-left: 3px;
-}
-
-.botao-search {
+  .search .search_input{
+  padding: 0 10px;
+  width: 300px;
+  caret-color:rgb(0, 0, 0);
+  transition: width 0.4s linear;
+  }
+  
+  .search:hover > .search_icon{
+  background: rgb(221, 9, 9);
   color: #000000;
+  transition: 0.5s;
+  }
+
+  .search_icon{
+  height: 3vh;
+  width: 3vh;
   float: right;
-  position: re;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgb(53, 53, 53);
   display: flex;
   justify-content: center;
-  text-decoration: none;
   align-items: center;
-  transition: 0.4s;
-  margin-top: -10px;
-}
-
-.botao-search:hover{
-  color: rgb(211, 210, 210);
-}
-
-.caixa-texto {
-  border: none;
-  background-color: rgb(53, 53, 53);
-  outline: none;
-  float: left;
-  padding: 0;
-  color: #fff;
-  font-size: 16px;
-  transition: 0.4s;
-  line-height: 40px;
-  width: 0px;
-  cursor: pointer;
-  margin-top: -10px;
-}
+  border-radius: 50%;
+  color:rgb(0, 0, 0);
+  background-color: rgb(139, 10, 10);
+  }
+  
+a:link{
+  text-decoration:none;
+}    
