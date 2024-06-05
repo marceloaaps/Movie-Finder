@@ -1,0 +1,4 @@
+Controller é o intermediário de comunicação entre View (UI) e Model (Regras de negócio e acesso ao BD)
+A calsse controller deve coordenar a comunicação entre ambas as partes, mas deve possuir no máximo
+validações simples, como por exemplo se o usuário informou tudo corretamente, e se o campo existe no BD.
+
