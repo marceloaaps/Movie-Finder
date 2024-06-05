@@ -1,0 +1,2 @@
+Aqui ficará a parte de UI, onde comunicará sempre e diretamente para a classe Controller, fazendo
+as requisições.

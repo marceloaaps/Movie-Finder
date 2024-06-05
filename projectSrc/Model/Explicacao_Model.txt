@@ -1,0 +1,2 @@
+Aquele que tem acesso direto as classes DAO. Fará a comunicação indireta com o banco de dados,
+e enviará as requisições do Controller para o mesmo. Regras de negócio não serão executadas aqui.
