@@ -1,132 +1,93 @@
-/* 
-Seguintes cores em hexcode:
-Cor Principal (Preto) -#0e0f12
-Cor Secundária (Cinza escuro) - #303030
-Botões/interações (Vermelho) - #ec11119
-Hover nos botões, etc (Vermelho mais escuro) - rgb(53, 53, 53)
-Vermelho Onclick - #99161d */
-
-.buttone {
-    color: white;
-    outline: none;
-    text-decoration: none;
-    font-size: 16px;
-    border: none;
-    background: none;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 10px;
-  }
-  
-  .bg-custom-red {
-    text-align: center;
-    background-color: #5f1104;
-}
-
-  .buttone::before {
-    margin-left: auto;
-  }
-  
-  .buttone::after, .buttone::before {
-    content: '';
-    outline: none;
-    width: 0%;
-    height: 2px;
-    background: #fd1707;
-    display: block;
-    transition: 0.5s;
- 
-  }
-  
-  .buttone:hover::after, button:hover::before {
-    width: 100%;
-  }
-
-  .buttone:hover{
-    outline: none;
-    color: rgb(204, 204, 204);
-  }
-
-.buttone:focus{
-    outline: none; 
-}
-
-.buttone:active{
-    transition: 0.2222ms;
-    color: #ffffff;
-}
-
-
-.compName {
-  text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0 auto;
-    color: white;
-}
-.navbar-toggler{
-  transition: transform 0.3s ease;
-}
-
-.navbar-toggler:hover{
-  background-color: rgb(139, 10, 10);
-  transform: scale(1.1);
-}
-
-.navbar-toggler:focus{
-    outline: none;
-}
-
-.containerSearch{
-  align-self: right;
-  justify-self: right;
-  height: 6vh;
-  width: 50%;
-}
-  .search{
-  margin-bottom: auto;
-  margin-top: auto;
-  height: 4vh;
-  background-color: #e9caca;
-  border-radius: 40px;
-  padding: 5px;
-  }
-
-  .search_input{
-  color: rgb(0, 0, 0);
-  border: 0;
-  outline: 0;
-  background: none;
-  margin-top: -40px;
-  caret-color:transparent;
-  transition: width 0.4s linear;
-  }
-
-  .search .search_input{
-  padding: 0 10px;
-  width: 300px;
-  caret-color:rgb(0, 0, 0);
-  transition: width 0.4s linear;
-  }
-  
-  .search:hover > .search_icon{
-  background: rgb(221, 9, 9);
-  color: #000000;
-  transition: 0.5s;
-  }
-
-  .search_icon{
-  height: 3vh;
-  width: 3vh;
-  float: right;
+header {
+  padding: 15px;
+  background-color: black;
+  color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color:rgb(0, 0, 0);
-  background-color: rgb(139, 10, 10);
-  }
-  
-a:link{
-  text-decoration:none;
-}    
+  align-items: center; /* Adicionando alinhamento vertical */
+}
 
+
+.site-name {
+  font-weight: bold;
+  font-size: 28px;
+  color: #e50914;
+}
+
+nav {
+  display: flex; /* Para alinhar os itens da navegação horizontalmente */
+  align-items: center; /* Para alinhar os itens verticalmente */
+  margin-left: auto; /* Ajuste para alinhar à direita */
+  margin-right: 30px; /* Ajuste para alinhar à direita */
+}
+
+
+.categoria,
+.cadastro,
+.suporte,
+.perfil {
+  color: #fff;
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block; /* Para que possam ser centralizadas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  width: 150px; /* Define uma largura para as palavras */
+}
+
+.categoria + .cadastro,
+.cadastro + .suporte,
+.suporte + .perfil {
+  margin-left: 20px;
+}
+
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.categoria:hover,
+.cadastro:hover,
+.suporte:hover,
+.perfil:hover, 
+.search-box:hover,
+.fas:hover {
+  color: #e50914;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo do campo de busca */
+}
+
+
+.search-box input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+
+.search-box input[type="text"]::placeholder {
+  color: #fff; /* Cor do texto do placeholder */
+}
+
+.search-box a {
+  padding: 15px;
+  background-color: black; /* Cor do botão de busca */
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+search-box a:hover {
+  background-color: black; /* Cor do botão de busca ao passar o mouse */
+}

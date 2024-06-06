@@ -7,53 +7,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/landingstyle.css">
-  <link rel="stylesheet" href="css/navbar.css">
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/navbar.css">
   <title>Landing Page Safadosflix</title>
 </head>
 
 <body id="background">
-  <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-custom-red">
-        <span class="text-muted">
-          <button class="buttone" id="buttonLP" href="landing.html">
-            LANDING PAGE
-          </button>
-          <button class="buttone" >
-            CRÉDITOS
-          </button>
-          <button class="buttone" href="#">
-            PERFIL
-          </button>
-          
-          <button class="buttone" href="#">
-            GESTÃO
-          </button>
-          <button class="buttone" id="quitButton" onclick="window.location.href='login.html'" >
-            SAIR
-          </button>
-      </div>
-    </div>
-    <nav class="navbar navbar-dark bg-custom-red">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <h1 class="compName">MOVIE FINDER</h1>
-      <div class="containerSearch">
-        <div class="d-flex justify-content-center h-100">
-          <div class="search">
-            <input class="search_input" type="text" name="" placeholder="Oque está procurando?">
-            <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
-          </div>
+  <header>
+    <div class="site-name">Movie Search</div>
+      <nav>
+        <a href="#" class="categoria">Categorias</a>
+        <a href="#" class="cadastro">Cadastro</a>
+        <a href="#" class="suporte">Suporte</a>
+        <a href="#" class="perfil">Meu Perfil</a>
+        <div class="search-box">
+            <input type="text" placeholder="Digite aqui">
+            <a href="#"><i class="fas fa-search"></i></a>
         </div>
-      </div>
-    </nav>
-  </div>
+      </nav>
+  </header>
 
   <div id="carouselExample" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
