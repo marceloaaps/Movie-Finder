@@ -1,0 +1,2 @@
+A camada de serviço pode se comunicar principalmente com a Controller, e em alguns casos
+pode se comunicar com a Model. Nessa camada estarão as regras de negócio complexas.
