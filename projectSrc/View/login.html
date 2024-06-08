@@ -1,57 +1,62 @@
-<!-- Feito por Elberty -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela login</title>
-    <link rel="stylesheet" href="css/loginC.css">
-    <style>
-        body{
-            font-family: 'Times New Roman', Times, serif;
-            background-image: linear-gradient(45deg, black , red );
-        }
-        div{
-            background-color: rgba( 0, 0, 0, 0.3);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            padding: 80px;
-            border-radius: 15px;
-            color: white;
-        }
-        input{
-            padding: 15px;
-            border: none;
-            outline: none;
-            font-size: 15px;
-        }
-        button{
-            background-color: dodgerblue;
-            border: none;
-            padding: 15px;
-            width: 100%;
-            border-radius: 10px;
-            color: white;
-            font-size: 15px;
-        }
-        button:hover{
-            background-color: deepskyblue;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="css/login_page.css">
 </head>
+
 <body>
-    <div>
-        <h1>Login</h1>
-        <input type="text" placeholder="Nome">
-        <br> <br>
-        <input type="password" placeholder="Senha">
-        <br><br>
-        <button>Enviar</button>
-        
-    </div>
+    <main class="apresentacao">
+        <section class="login_form">
+            <form>
+                <h1>FAÇA SEU LOGIN AQUI</h1>
+                <div class="email_form">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="password_form">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="form-enviar">
+                    <button type="submit">Enviar</button>
+                </div>
+                <div class="form-cadastrar">
+                    <button type="submit">Cadastra-se</button>
+                </div>
+                <div class="form-checkbox">
+                  <label><input type="checkbox">Esquece a senha?</label> 
+                  <a href="#">Clique aqui</a> 
+                </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="apresentacao_images">
+            <div class="images_nome">
+            <h2>FAÇA SEU LOGIN E APROVEITE<br>
+                100% DO STREAMING</h2>
+            </div>
+
+            <div class="images">
+                <div class="images_notebook">
+                    <img src="img/laptop.png">
+                </div>
+                <div class="images_smartphone">
+                    <img src="img/smartphone.png">
+                </div>
+                <div class="images_tv">
+                    <img src="img/tv.png">
+                </div>
+                <div class="images_film">
+                    <img src="img/movie.png">
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

@@ -1,0 +1,169 @@
+:root {
+    --cor-principal: #0e0f12;
+    --cor-secundaria: #303030;
+    --botoes-interacoes: #e50914;
+    --hover-botoes: #c11119;
+    --vermelho-click: #99161d;
+    --branco-padrao: #ffffff;
+    --font-padrao: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 10rem;
+    background-color: var(--cor-principal);
+}
+
+.apresentacao {
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.form {
+    padding: 20px;
+
+}
+
+.login_form {
+    background-color: var(--vermelho-click);
+    margin-top: 8rem;
+    margin-left: 8rem;
+    width: 35rem;
+    height: 27rem;
+    border-radius: 0.625rem;
+    text-align: center;
+    gap: 3rem;
+
+}
+
+.login_form h1 {
+    color: var(--branco-padrao);
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+}
+
+.name_form label {
+    font-size: 2rem;
+}
+
+.name_form input {
+    margin-bottom: 1.5rem;
+    margin-left: 0.9375rem;
+    font-size: 2rem;
+    height: 2.9rem;
+    border-radius: 0.625rem;
+}
+
+.email_form label {
+    font-size: 2rem;
+}
+
+.email_form input {
+    margin-bottom: 1.5rem;
+    margin-left: 0.625rem;
+    font-size: 2rem;
+    height: 2.9rem;
+    border-radius: 0.625rem;
+}
+
+.password_form label {
+    font-size: 2rem;
+}
+
+.password_form input {
+    margin-bottom: 1.5rem;
+    margin-left: 0.9375rem;
+    font-size: 2rem;
+    height: 2.9rem;
+    border-radius: 0.625rem;
+}
+
+
+
+.email_form,
+.password_form {
+    color: var(--branco-padrao);
+}
+
+.form-enviar button{
+   align-items: center;
+   width: 12rem;
+   height: 3rem;
+   border-radius: 1rem;
+   font-size: 1.5rem;
+   margin-top: 0.7rem;  
+}
+
+.form-cadastrar button{
+    align-items: center;
+    width: 12rem;
+    height: 3rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-top: 0.7rem;  
+}
+
+.form-checkbox{
+    color: var(--branco-padrao);
+    font-size: 1rem;
+}
+
+.form-checkbox a{
+    color: var(--cor-principal);
+    font-size: 1rem;
+  
+}
+.apresentacao_images{
+    margin-right: 6rem;
+    margin-top: 1rem;
+}
+
+.images_nome  {
+    color: var(--branco-padrao);
+    text-align: center;
+    margin-right: 1rem;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+}
+
+.images {
+    justify-content: center;
+    display: grid;
+    flex-wrap: wrap;
+}
+
+.images_notebook img {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+   
+   
+}
+
+.images_smartphone img {
+    width: 6rem;
+    height: 6rem;
+   
+}
+
+.images_tv img {
+    width: 6rem;
+    height: 6rem;
+     
+}
+
+.images_film img {
+    width: 6rem;
+    height: 6rem;
+     
+}
+
