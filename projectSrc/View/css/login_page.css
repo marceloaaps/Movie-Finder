@@ -50,38 +50,31 @@ body {
     margin-top: 2rem;
 }
 
-.name_form label {
-    font-size: 2rem;
-}
-
-.name_form input {
-    margin-bottom: 1.5rem;
-    margin-left: 0.9375rem;
-    font-size: 2rem;
-    height: 2.9rem;
-    border-radius: 0.625rem;
-}
 
 .email_form label {
+    display: block;
+    margin-right: 23rem;
     font-size: 2rem;
 }
 
 .email_form input {
     margin-bottom: 1.5rem;
     margin-left: 0.625rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     height: 2.9rem;
     border-radius: 0.625rem;
 }
 
 .password_form label {
+    display: block;
+    margin-right: 23rem;
     font-size: 2rem;
 }
 
 .password_form input {
     margin-bottom: 1.5rem;
     margin-left: 0.9375rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     height: 2.9rem;
     border-radius: 0.625rem;
 }
@@ -93,40 +86,53 @@ body {
     color: var(--branco-padrao);
 }
 
-.form-enviar button{
-   align-items: center;
+.form-enviar button {
+    color: var(--branco-padrao);
+    background-color: var(--cor-principal);
+    align-items: center;
    width: 12rem;
    height: 3rem;
    border-radius: 1rem;
    font-size: 1.5rem;
-   margin-top: 0.7rem;  
+   margin-bottom: 1rem;  
+
 }
 
-.form-cadastrar button{
-    align-items: center;
-    width: 12rem;
-    height: 3rem;
-    border-radius: 1rem;
-    font-size: 1.5rem;
-    margin-top: 0.7rem;  
+.info_form{
+    margin-top: -14px;
 }
 
-.form-checkbox{
+.form-cds {
     color: var(--branco-padrao);
     font-size: 1rem;
+    margin-top: 1px;
+    
 }
 
-.form-checkbox a{
+.form-cds a {
     color: var(--cor-principal);
     font-size: 1rem;
-  
 }
-.apresentacao_images{
+
+
+.form-checkbox {
+    color: var(--branco-padrao);
+    font-size: 1rem;
+    margin-bottom: 1px; 
+}
+
+.form-checkbox a {
+    color: var(--cor-principal);
+    font-size: 1rem;
+
+}
+
+.apresentacao_images {
     margin-right: 6rem;
     margin-top: 1rem;
 }
 
-.images_nome  {
+.images_nome {
     color: var(--branco-padrao);
     text-align: center;
     margin-right: 1rem;
@@ -145,25 +151,24 @@ body {
     height: 6rem;
     margin-right: 1rem;
     margin-top: 1rem;
-   
-   
+
+
 }
 
 .images_smartphone img {
     width: 6rem;
     height: 6rem;
-   
+
 }
 
 .images_tv img {
     width: 6rem;
     height: 6rem;
-     
+
 }
 
 .images_film img {
     width: 6rem;
     height: 6rem;
-     
-}
 
+}
