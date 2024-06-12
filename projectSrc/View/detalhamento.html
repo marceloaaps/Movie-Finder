@@ -12,12 +12,12 @@
 </head>
 <body>
     <header>
-        <div class="site-name">Movie Search</div>
+        <div class="site-name">Movie Finder</div>
             <nav>
-            <a href="#" class="categoria">Categorias</a>
-            <a href="#" class="cadastro">Cadastro</a>
-            <a href="#" class="suporte">Suporte</a>
-            <a href="#" class="perfil">Meu Perfil</a>
+                <a href="landing.html" class="categoria">Landing Page</a>
+                <a href="management.html" class="cadastro">Gestão</a>
+                <a href="#" class="suporte">Meu Perfil</a>
+                <a href="login.html" class="perfil">Sair</a>
             <div class="search-box">
                 <input type="text" placeholder="Digite aqui">
                 <a href="#"><i class="fas fa-search"></i></a>
@@ -30,10 +30,8 @@
             <p>"A Volta dos Que Não Foram" é um filme fictício que narra a jornada de um grupo de exploradores em busca de segredos além do nosso mundo. Repleto de reviravoltas e personagens cativantes, este épico cinematográfico promete uma experiência única e surpreendente.</p>
             <p>Classificação: 12 anos</p>
             <p>Duração: 120 minutos</p>
-            <!-- Botão para mostrar ou ocultar informações adicionais -->
             <br>
-            <button onclick="toggleDetails()">+Mais Detalhes</button>
-            <!-- Elemento para exibir as informações adicionais (inicialmente oculto) -->
+            <button onclick="toggleDetails()">Mais Detalhes</button>
             <div id="additional-info" style="display: none;">
                 <h2>Informações Adicionais</h2>
                 <p>Assessoria de conteúdo: Linguagem inadequada, drogas, violência extrema</p>
@@ -49,30 +47,30 @@
     <footer>
         <div class="footer-section">
             <h2>Filmes Relacionados</h2>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <img src="img/filme1.jpg" alt="Filme 1">
-                        <div class="carousel-item-overlay">"Filme Relacionado 1"</div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/foto5.png" alt="Filme 2">
-                        <div class="carousel-item-overlay">"Filme Relacionado 2"</div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/filme.jpg" alt="Filme 3">
-                        <div class="carousel-item-overlay">"Filme Relacionado 3"</div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/shrek5.jpg" alt="Filme 4">
-                        <div class="carousel-item-overlay">"Filme Relacionado 4"</div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/bomberman.jpg" alt="Filme 5">
-                        <div class="carousel-item-overlay">"Filme Relacionado 5"</div>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="img/filme1.jpg" alt="Filme 1">
+                            <div class="carousel-item-overlay">"Filme Relacionado 1"</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/foto5.png" alt="Filme 2">
+                            <div class="carousel-item-overlay">"Filme Relacionado 2"</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/filme.jpg" alt="Filme 3">
+                            <div class="carousel-item-overlay">"Filme Relacionado 3"</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/shrek5.jpg" alt="Filme 4">
+                            <div class="carousel-item-overlay">"Filme Relacionado 4"</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/bomberman.jpg" alt="Filme 5">
+                            <div class="carousel-item-overlay">"Filme Relacionado 5"</div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
     </footer>
     <script>
@@ -85,7 +83,7 @@
                 moreButton.textContent = 'Ocultar Detalhes';
             } else {
                 additionalInfo.style.display = 'none';
-                moreButton.textContent = '+Mais Detalhes';
+                moreButton.textContent = 'Mais Detalhes';
             }
         }
     </script>

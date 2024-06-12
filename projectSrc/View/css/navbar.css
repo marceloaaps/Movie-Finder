@@ -14,10 +14,10 @@ header {
 }
 
 nav {
-  display: flex; /* Para alinhar os itens da navegação horizontalmente */
-  align-items: center; /* Para alinhar os itens verticalmente */
-  margin-left: auto; /* Ajuste para alinhar à direita */
-  margin-right: 30px; /* Ajuste para alinhar à direita */
+  display: flex;
+  align-items: center; 
+  margin-left: auto; 
+  margin-right: 30px; 
 }
 
 
@@ -31,7 +31,7 @@ nav {
   font-size: 20px;
   font-weight: bold;
   display: inline-block; /* Para que possam ser centralizadas */
-  text-align: center; /* Centraliza o texto horizontalmente */
+  text-align: center;
   width: 150px; /* Define uma largura para as palavras */
 }
 

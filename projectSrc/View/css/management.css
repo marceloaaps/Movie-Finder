@@ -1,0 +1,130 @@
+/* Seguintes cores em hexcode: 
+Cor Principal (Preto) - #0e0f12 
+Cor Secundária (Cinza escuro) - #303030 
+Botões/interações (Vermelho) - #e50914 
+Hover nos botões, etc (Vermelho mais escuro) - #c11119 
+Vermelho Onclick - #99161d 
+*/
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #0e0f12;
+}
+
+.containerThings {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 5vw 10vh 5vw;
+    background-color: #0e0f12;
+}
+
+#p {
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 1em;
+    color: rgb(255, 255, 255);
+}
+
+.p2 {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.h1H {
+    font-size: 2.5em;
+    margin: 0 1em;
+    color: azure;
+}
+
+.boxesSearch {
+    line-height: normal;
+    margin: 7vh 0 2.5vh 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxText {
+    padding: 8px;
+    text-align: center;
+    font-size: 1.5em;
+    overflow: hidden;
+    border: none;
+    color: white;
+    width: 15vh;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    resize: none;
+    box-sizing: border-box;
+    height: 5.5vh;
+}
+
+.boxText::placeholder {
+    height: 100%;
+    color: white;
+    font-size: 1.0em;
+}
+
+.boxText:focus, .btnDate:focus {
+    outline: none;
+}
+
+.btnDate {
+    padding: 8px;
+    font-size: 1.5em;
+    overflow: hidden;
+    border: none;
+    color: white;
+    width: 15vh;
+    border-radius: 6px;
+    background-color: #e50914;
+    height: 5.5vh;
+    margin-left: auto;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btnDate:hover {
+    background-color: #c11119;
+    color: #0e0f12;
+    transform: scale(1.04);
+}
+
+table {
+    border-radius: 8px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px double #f5f5f5;
+    padding: 8px;
+}
+
+th {
+    background-color: #303030;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    .containerThings {
+        margin: 5vh 2.5vw 10vh 2.5vw;
+    }
+
+    .boxesSearch {
+        flex-direction: column;
+    }
+
+    .boxText, .btnDate {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+
+    .btnDate {
+        margin-left: 0;
+    }
+}

@@ -5,14 +5,13 @@ Cor Secundária (Cinza escuro) - #303030
 Botões/interações (Vermelho) - #e50914
 Hover nos botões, etc (Vermelho mais escuro) - #c11119
 Vermelho Onclick - #99161d */
-body{
+
+
+#background {
     font-family: sans-serif;
     width: 100%;
     margin: 0 auto;
-    
-}
-
-#background {
+    background-color: #0e0f12;
     background-color: #0e0f12;
 }
 
@@ -25,7 +24,6 @@ body{
     position: absolute;
     height: 100vh;
 }
-
 
 .infos {
     z-index: 1;
