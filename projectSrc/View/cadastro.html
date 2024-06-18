@@ -12,7 +12,7 @@
     <div class="box">
         <form action="../Controller/RegistroController.php" method="post">
             <fieldset>
-                <legend><b>Fórmulario de Cadastro</b></legend>
+                <legend><b>Formulário de Cadastro</b></legend>
                 <br>
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
@@ -20,7 +20,7 @@
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <input type="email" name="email" id="email" class="inputUser" required>
                     <label for="email" class="labelInput">Email</label>
                 </div>
                 <br><br>
@@ -28,6 +28,12 @@
                     <input type="tel" name="telefone" id="telefone" class="inputUser" required>
                     <label for="telefone" class="labelInput">Telefone</label>
                 </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput">Senha</label>
+                </div>
+                <br><br>
                 <p>Planos</p>
                 <input type="radio" id="mensal" name="plano" value="mensal" required>
                 <label for="mensal">Mensal = 25,99</label>
@@ -38,8 +44,8 @@
                 <input type="radio" id="anual" name="plano" value="anual" required>
                 <label for="anual">Anual = 15,99</label>
                 <br><br>
-                    <label for="data_nascimento"><b>Data de Nascimento</b></label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <label for="data_nascimento"><b>Data de Nascimento</b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
                 <br><br>
                 <div class="inputBox">
                     <input type="text" name="cidade" id="cidade" class="inputUser" required>
@@ -53,7 +59,7 @@
                 <br><br>
                 <div class="inputBox">
                     <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                    <label for="endereco" class="labelInput">EnderSeço</label>
+                    <label for="endereco" class="labelInput">Endereço</label>
                 </div>
                 <br><br>
                 <input type="submit" name="submit" id="submit">

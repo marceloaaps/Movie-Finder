@@ -7,14 +7,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    // Criar uma nova instância de UsuarioDAO e autenticar o usuário
+    // Criar uma nova instância de UsuarioDAO
     $usuarioDAO = new UsuarioDAO($conn);
-    if ($usuarioDAO->autenticar($email, $senha)) {
-        echo "<script>alert('Login efetuado com sucesso!');</script>";
-        // Redirecionar para página principal ou outra ação após login
+
+    // Verificar se o e-mail está cadastrado
+    if ($usuarioDAO->emailExiste($email)) {
+        // Autenticar o usuário
+        if ($usuarioDAO->autenticar($email, $senha)) {
+            echo "<script>alert('Login efetuado com sucesso!');</script>";
+            // Redirecionar para página principal ou outra ação após login
+        } else {
+            echo "<script>alert('Credenciais inválidas.');</script>";
+            // Redirecionar de volta à página de login com mensagem de erro
+        }
     } else {
-        echo "<script>alert('Credenciais inválidas.');</script>";
-        // Redirecionar de volta à página de login com mensagem de erro
+        echo "<script>alert('E-mail não cadastrado.');</script>";
     }
 } else {
     echo "Método de requisição inválido.";

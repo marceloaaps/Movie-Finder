@@ -1,6 +1,4 @@
 <?php
-// UsuarioDAO.php
-
 // Definição da classe UsuarioDAO que gerencia as operações de dados para a entidade Usuario.
 class UsuarioDAO {
     private $conn;
@@ -92,6 +90,34 @@ class UsuarioDAO {
             // Retorna false se nenhum usuário com o email fornecido for encontrado.
             return false;
         }
+    }
+
+    // Método para verificar se um e-mail já está cadastrado no banco de dados.
+    public function emailExiste($email) {
+        // Declaração SQL para selecionar o id do usuário com o email fornecido.
+        $sql = "SELECT ID_USUARIO FROM USUARIOS WHERE EMAIL = ?";
+        
+        // Preparação da declaração SQL.
+        $stmt = $this->conn->prepare($sql);
+        
+        // Verifica se a preparação da declaração falhou.
+        if (!$stmt) {
+            // Exibe uma mensagem de erro e retorna false se a preparação falhar.
+            echo "Erro na preparação da declaração: " . $this->conn->error;
+            return false;
+        }
+
+        // Associação do parâmetro da declaração SQL com o email fornecido.
+        $stmt->bind_param("s", $email);
+        
+        // Execução da declaração SQL.
+        $stmt->execute();
+        
+        // Armazena o resultado.
+        $stmt->store_result();
+        
+        // Retorna true se houver alguma linha no resultado, indicando que o email já está cadastrado.
+        return $stmt->num_rows > 0;
     }
 }
 ?>

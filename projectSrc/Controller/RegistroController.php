@@ -26,16 +26,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario->setEstado($estado);
     $usuario->setEndereco($endereco);
 
-    // Criar uma nova instância de UsuarioDAO e salvar o usuário
+    // Criar uma nova instância de UsuarioDAO
     $usuarioDAO = new UsuarioDAO($conn);
-    if ($usuarioDAO->salvar($usuario)) {
-        #redirecionamento para a magina
-        echo  "<script>alert('Usuário salvo com sucesso!');</script>";
 
-
+    // Verificar se o e-mail já está cadastrado
+    if ($usuarioDAO->emailExiste($email)) {
+        echo "<script>alert('E-mail já cadastrado. Por favor, utilize outro e-mail.');</script>";
     } else {
-        echo  "<script>alert('Erro ao registrar o usuário no banco de dados.');</script>";
-        
+        // Salvar o usuário se o e-mail não estiver cadastrado
+        if ($usuarioDAO->salvar($usuario)) {
+            echo "<script>alert('Usuário salvo com sucesso!');</script>";
+            // Redirecionar para a página desejada
+            // header("Location: pagina_desejada.php");
+        } else {
+            echo "<script>alert('Erro ao registrar o usuário no banco de dados.');</script>";
+        }
     }
 } else {
     echo "Método de requisição inválido.";
