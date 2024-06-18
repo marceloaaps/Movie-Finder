@@ -1,0 +1,43 @@
+<?php
+require_once '../DAO/database/db_connect.php';
+require_once '../Model/Usuario.php';
+require_once '../DAO/UsuarioDAO.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    $plano = $_POST['plano'];
+    $dataNascimento = $_POST['data_nascimento'];
+    $cidade = $_POST['cidade'];
+    $estado = $_POST['estado'];
+    $endereco = $_POST['endereco'];
+
+    // Criar uma nova instância de Usuario
+    $usuario = new Usuario();
+    $usuario->setNome($nome);
+    $usuario->setEmail($email);
+    $usuario->setTelefone($telefone);
+    $usuario->setSenha($senha);
+    $usuario->setPlano($plano);
+    $usuario->setDataNascimento($dataNascimento);
+    $usuario->setCidade($cidade);
+    $usuario->setEstado($estado);
+    $usuario->setEndereco($endereco);
+
+    // Criar uma nova instância de UsuarioDAO e salvar o usuário
+    $usuarioDAO = new UsuarioDAO($conn);
+    if ($usuarioDAO->salvar($usuario)) {
+        #redirecionamento para a magina
+        echo  "<script>alert('Usuário salvo com sucesso!');</script>";
+
+
+    } else {
+        echo  "<script>alert('Erro ao registrar o usuário no banco de dados.');</script>";
+        
+    }
+} else {
+    echo "Método de requisição inválido.";
+}
+?>

@@ -11,7 +11,7 @@
 <body>
     <main class="apresentacao">
         <section class="login_form">
-            <form>
+            <form action="../Controller/LoginController.php" method="POST">
                 <h1>FAÇA SEU LOGIN AQUI</h1>
                 <div class="email_form">
                     <label for="email">E-mail:</label>
@@ -22,16 +22,16 @@
                     <input type="password" id="senha" name="senha" required>
                 </div>
                 <div class="form-enviar">
-                    <button type="submit">Enviar</button>
+                    <button type="submit" name="login">Enviar</button>
                 </div>
                 <div class="info_form">
                     <div class="form-checkbox">
-                        <label>Esquece a senha?</label>
+                        <label>Esqueceu a senha?</label>
                         <a href="#">Clique aqui</a>
                     </div>
                     <div class="form-cds">
-                        <label>Não tem cadastro clique aqui?</label>
-                        <a href="cadastro.html">Clique aqui</a>
+                        <label>Não tem cadastro?</label>
+                        <a href="#">Clique aqui para se registrar</a>
                     </div>
                 </div>
                 </div>
