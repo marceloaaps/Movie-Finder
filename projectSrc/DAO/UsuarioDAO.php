@@ -116,7 +116,7 @@ class UsuarioDAO {
         // Armazena o resultado.
         $stmt->store_result();
         
-        // Retorna true se houver alguma linha no resultado, indicando que o email já está cadastrado.
+        // Retorna true se houver alguma linha no resultado, indicando que o email já está cadastrado
         return $stmt->num_rows > 0;
     }
 }
