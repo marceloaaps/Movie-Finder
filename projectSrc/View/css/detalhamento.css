@@ -1,3 +1,134 @@
+/* Estilos padrão */
+header {
+    padding: 15px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .site-name {
+    font-weight: bold;
+    font-size: 28px;
+    color: #e50914;
+    margin-left: 20px; /* Ajuste para alinhamento em telas pequenas */
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px; /* Ajuste para alinhamento em telas pequenas */
+  }
+  
+  .categoria,
+  .cadastro,
+  .suporte,
+  .perfil {
+    color: #fff;
+    margin-left: 20px; /* Espaçamento entre os itens */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+  }
+  
+  .categoria + .cadastro,
+  .cadastro + .suporte,
+  .suporte + .perfil {
+    margin-left: 20px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .categoria:hover,
+  .cadastro:hover,
+  .suporte:hover,
+  .perfil:hover, 
+  .search-box:hover,
+  .fas:hover {
+    color: #e50914;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 20px; /* Ajuste para alinhamento em telas pequenas */
+  }
+  
+  .search-box input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+  }
+  
+  .search-box input[type="text"]::placeholder {
+    color: #fff;
+  }
+  
+  .search-box a {
+    padding: 15px;
+    background-color: black;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .search-box a:hover {
+    background-color: black;
+  }
+  
+  /* Media queries para telas pequenas */
+  @media screen and (max-width: 767px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .site-name {
+      margin-left: 15px;
+      margin-bottom: 10px;
+    }
+  
+    nav {
+      margin-top: 20px;
+      margin-left: 15px;
+      flex-direction: column;
+    }
+  
+    .categoria,
+    .cadastro,
+    .suporte,
+    .perfil {
+      font-size: 16px;
+      margin: 5px 15px;
+      width: auto;
+    }
+  
+    .categoria + .cadastro,
+    .cadastro + .suporte,
+    .suporte + .perfil {
+      margin-left: 15px;
+    }
+  
+    .search-box {
+      margin: 20px 15px;
+      margin-right: 0; /* Remover margem à direita */
+    }
+  }
 body {
     font-family: sans-serif;
     margin: 0;
