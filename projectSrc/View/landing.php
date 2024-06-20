@@ -1,4 +1,9 @@
 <!-- Feito por Marcelo -->
+<?php
+require_once '../Controller/auth_check.php';
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,16 +23,17 @@
 <body id="background">
   <header>
     <div class="site-name">Movie Finder</div>
-      <nav>
-        <a href="landing.html" class="categoria">Landing Page</a>
-        <a href="management.html" class="cadastro">Gestão</a>
-        <a href="#" class="suporte">Meu Perfil</a>
-        <a href="login.html" class="perfil">Sair</a>
-        <div class="search-box">
-            <input type="text" placeholder="Digite aqui">
-            <a href="#"><i class="fas fa-search"></i></a>
-        </div>
-      </nav>
+    <nav>
+      <a href="landing.html" class="categoria">Landing Page</a>
+      <a href="management.html" class="cadastro">Gestão</a>
+      <a href="#" class="suporte">Meu Perfil</a>
+      <a href="#" class="suporte"><?php echo $nome; ?></a>
+      <a href="../Controller/logout.php">Sair</a>
+      <div class="search-box">
+        <input type="text" placeholder="Digite aqui">
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+    </nav>
   </header>
 
   <div id="carouselExample" class="carousel slide" data-ride="carousel">
