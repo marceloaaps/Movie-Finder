@@ -15,7 +15,7 @@ require_once '../Controller/auth_check.php';
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/landingstyle.css">
+  <link rel="stylesheet" href="css/landingStyle.css">
   <link rel="stylesheet" href="css/navbar.css">
   <title>Landing Page Safadosflix</title>
 </head>
@@ -124,52 +124,52 @@ require_once '../Controller/auth_check.php';
     <div class="movieBlock">
       <div class="movies-scroller">
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
@@ -180,52 +180,52 @@ require_once '../Controller/auth_check.php';
     <div class="movieBlock">
       <div class="movies-scroller">
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
@@ -236,52 +236,52 @@ require_once '../Controller/auth_check.php';
     <div class="movieBlock">
       <div class="movies-scroller">
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
@@ -292,52 +292,52 @@ require_once '../Controller/auth_check.php';
     <div class="movieBlock">
       <div class="movies-scroller">
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
@@ -348,52 +348,52 @@ require_once '../Controller/auth_check.php';
     <div class="movieBlock">
       <div class="movies-scroller">
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
@@ -404,52 +404,52 @@ require_once '../Controller/auth_check.php';
     <div class="movieBlock">
       <div class="movies-scroller">
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
         <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='images/not_found.png';" />
+          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
           <h1 class="movieMiniName">PLACEHOLDER</h1>
           <p class="movieGenre">Placeholder</p>
         </div>
