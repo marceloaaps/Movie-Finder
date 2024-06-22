@@ -1,9 +1,6 @@
 <?php
 // Define as credenciais do servidor de banco de dados
-$servername = "localhost"; // Endereço do servidor MySQL
-$username = "root";        // Nome de usuário do MySQL
-$password = "l12345"; // Senha do usuário MySQL
-$dbname = "CINEMINHA";     // Nome do banco de dados
+require_once '../DAO/database/db_connect.php';
 
 // Criando a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,18 +11,29 @@ if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
 
-$sql = "SELECT ID_FILME, TITLE, imANO_LANCAMENTO, SINOPESE, CAMINHO_POSTER FROM movies";
+
+$sql = "SELECT ID_FILME, TITLE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS";
 $result = $conn->query($sql);
 
-$movies = array();
+$id_filme = array();
+$titulo = array();
+$generos = array();
+$filmes = array();
 
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $movies[] = $row;
+    while ($row = $result->fetch_assoc()) {
+        $filme = array(
+            "ID_FILME" => $row['ID_FILME'],
+            "TITLE" => $row['TITLE'],
+            "GENEROS" => $row['GENEROS'],
+            "CAMINHO_POSTER" => 'https://image.tmdb.org/t/p/w500' . $row['CAMINHO_POSTER']
+        );
+
+        $filmes[] = $filme;
+        $id_filme[] = $filme;
+        $titulo[] = $filme;
+        $generos[] = $filme;
     }
-} 
+}
 
-$conn->close();
-
-echo json_encode($movies);
 ?>
