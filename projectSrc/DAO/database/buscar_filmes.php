@@ -1,6 +1,7 @@
 <?php
 // Define as credenciais do servidor de banco de dados
-require_once '../DAO/database/db_connect.php'; // Nome do banco de dados
+require_once '../DAO/database/db_connect.php';
+
 
 // Criando a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,23 +12,32 @@ if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
 
-$sql = "SELECT ID_FILME, TITLE, ANO_LANCAMENTO, CAMINHO_POSTER, GENEROS
- FROM filmes";
+
+$sql = "SELECT ID_FILME, TITLE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS";
 $result = $conn->query($sql);
 
-$filme_ids = array();
-$titulos = array();
-$lancamentos = array();
-$posters = array();
+$id_filme = array();
+$titulo = array();
+$generos = array();
+$filmes = array();
 
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $filme_ids[] = $row['ID_FILME'];
-        $titulos[] = $row['TITLE'];
-        $lancamentos[] = $row['ANO_LANCAMENTO'];
-        $posters[] = $row['CAMINHO_POSTER'];
+    while ($row = $result->fetch_assoc()) {
+        $filme = array(
+            "ID_FILME" => $row['ID_FILME'],
+            "TITLE" => $row['TITLE'],
+            "GENEROS" => $row['GENEROS'],
+            "CAMINHO_POSTER" => 'https://image.tmdb.org/t/p/w500' . $row['CAMINHO_POSTER']
+        );
+
+        $filmes[] = $filme;
+        $id_filme[] = $filme;
+        $titulo[] = $filme;
+        $generos[] = $filme;
     }
 }
+
+?>
 
 
 // $id_filme = 'SELECT  ID_FILME  FROM filmes';
@@ -86,7 +96,7 @@ if ($result->num_rows > 0) {
 //     }
 // }
 
-$conn->close();
+
 
 
 ?>

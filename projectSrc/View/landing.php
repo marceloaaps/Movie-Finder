@@ -4,8 +4,8 @@ require_once '../Controller/auth_check.php';
 require_once '../DAO/database/db_connect.php';
 require_once '../DAO/database/buscar_filmes.php';
 
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -113,57 +113,175 @@ require_once '../DAO/database/buscar_filmes.php';
       <span class="sr-only">Próximo</span>
     </a>
   </div>
-  <div class="containerThings" data-aos="fade-right">
 
+  <div class="containerThings" data-aos="fade-right">
     <h1 class="p2" data-aos="fade-up">Boa noite, Marcelo!</h1>
     <h1 id="p">Filmes em Alta</h1>
     <div class="movieBlock">
       <div class="movies-scroller">
-        <?php for ($i = 0; $i < count($filme_ids); $i++) : ?>
+        <?php foreach ($filmes as $filme) : ?>
           <div class="moviebox">
-            <img src="gots.jpeg" class="miniImg" onerror="this.src='<?php echo $posters[$i]; ?>'" />
-            <h1 class="movieMiniName"><?php echo $titulos[$i]; ?></h1>
-            <p class="movieGenre"><?php echo $lancamentos[$i]; ?></p>
+            <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
+              <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
+            <?php endif; ?>
+            <h1 class="movieMiniName">
+              <?php if (isset($filme['TITLE'])) : ?>
+                <?php echo $filme['TITLE']; ?>
+              <?php else : ?>
+                <?php echo 'Título não disponível'; ?>
+              <?php endif; ?>
+            </h1>
+            <p class="movieGenre">
+              <?php if (isset($filme['GENEROS'])) : ?>
+                <?php echo $filme['GENEROS']; ?>
+              <?php else : ?>
+                <?php echo 'Gênero não disponível'; ?>
+              <?php endif; ?>
+            </p>
           </div>
-        <?php endfor; ?>
+        <?php endforeach; ?>
       </div>
-    </div>
 
-    <h1 id="p">Filmes Recomendados</h1>
+      <h1 id="p">Filmes Recomendados</h1>
+      <div class="movieBlock">
+        <div class="movies-scroller">
+          <?php foreach ($filmes as $filme) : ?>
+            <div class="moviebox">
+              <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
+                <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
+              <?php endif; ?>
+              <h1 class="movieMiniName">
+                <?php if (isset($filme['TITLE'])) : ?>
+                  <?php echo $filme['TITLE']; ?>
+                <?php else : ?>
+                  <?php echo 'Título não disponível'; ?>
+                <?php endif; ?>
+              </h1>
+              <p class="movieGenre">
+                <?php if (isset($filme['GENEROS'])) : ?>
+                  <?php echo $filme['GENEROS']; ?>
+                <?php else : ?>
+                  <?php echo 'Gênero não disponível'; ?>
+                <?php endif; ?>
+              </p>
+            </div>
+          <?php endforeach; ?>
+        </div>
+
+        <h1 id="p">Filmes Oscar</h1>
+        <div class="movieBlock">
+          <div class="movies-scroller">
+            <?php foreach ($filmes as $filme) : ?>
+              <div class="moviebox">
+                <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
+                  <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
+                <?php endif; ?>
+                <h1 class="movieMiniName">
+                  <?php if (isset($filme['TITLE'])) : ?>
+                    <?php echo $filme['TITLE']; ?>
+                  <?php else : ?>
+                    <?php echo 'Título não disponível'; ?>
+                  <?php endif; ?>
+                </h1>
+                <p class="movieGenre">
+                  <?php if (isset($filme['GENEROS'])) : ?>
+                    <?php echo $filme['GENEROS']; ?>
+                  <?php else : ?>
+                    <?php echo 'Gênero não disponível'; ?>
+                  <?php endif; ?>
+                </p>
+              </div>
+            <?php endforeach; ?>
+          </div>
+
+          <h1 id="p">Animes em Alta</h1>
+          <div class="movieBlock">
+            <div class="movies-scroller">
+              <?php foreach ($filmes as $filme) : ?>
+                <div class="moviebox">
+                  <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
+                    <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
+                  <?php endif; ?>
+                  <h1 class="movieMiniName">
+                    <?php if (isset($filme['TITLE'])) : ?>
+                      <?php echo $filme['TITLE']; ?>
+                    <?php else : ?>
+                      <?php echo 'Título não disponível'; ?>
+                    <?php endif; ?>
+                  </h1>
+                  <p class="movieGenre">
+                    <?php if (isset($filme['GENEROS'])) : ?>
+                      <?php echo $filme['GENEROS']; ?>
+                    <?php else : ?>
+                      <?php echo 'Gênero não disponível'; ?>
+                    <?php endif; ?>
+                  </p>
+                </div>
+              <?php endforeach; ?>
+            </div>
+            
+            <h1 id="p">Dramas Coreanos</h1>
     <div class="movieBlock">
-    <div class="movies-scroller">
-        <?php for ($i = 0; $i < count($filme_ids); $i++) : ?>
+      <div class="movies-scroller">
+        <?php foreach ($filmes as $filme) : ?>
           <div class="moviebox">
-            <img src="gots.jpeg" class="miniImg" onerror="this.src='<?php echo $posters[$i]; ?>'" />
-            <h1 class="movieMiniName"><?php echo $titulos[$i]; ?></h1>
-            <p class="movieGenre"><?php echo $lancamentos[$i]; ?></p>
+            <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
+              <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
+            <?php endif; ?>
+            <h1 class="movieMiniName">
+              <?php if (isset($filme['TITLE'])) : ?>
+                <?php echo $filme['TITLE']; ?>
+              <?php else : ?>
+                <?php echo 'Título não disponível'; ?>
+              <?php endif; ?>
+            </h1>
+            <p class="movieGenre">
+              <?php if (isset($filme['GENEROS'])) : ?>
+                <?php echo $filme['GENEROS']; ?>
+              <?php else : ?>
+                <?php echo 'Gênero não disponível'; ?>
+              <?php endif; ?>
+            </p>
           </div>
-        <?php endfor; ?>
+        <?php endforeach; ?>
       </div>
-    </div>
 
-    <h1 id="p">Filmes de Ação</h1>
-    <div class="movieBlock">
-    <div class="movies-scroller">
-        <?php for ($i = 0; $i < count($filme_ids); $i++) : ?>
+      <h1 id="p">Filmes de Ação</h1>
+      <div class="movieBlock">
+        <div class="movies-scroller">
+        <?php foreach ($filmes as $filme) : ?>
           <div class="moviebox">
-            <img src="gots.jpeg" class="miniImg" onerror="this.src='<?php echo $posters[$i]; ?>'" />
-            <h1 class="movieMiniName"><?php echo $titulos[$i]; ?></h1>
-            <p class="movieGenre"><?php echo $lancamentos[$i]; ?></p>
+            <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
+              <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
+            <?php endif; ?>
+            <h1 class="movieMiniName">
+              <?php if (isset($filme['TITLE'])) : ?>
+                <?php echo $filme['TITLE']; ?>
+              <?php else : ?>
+                <?php echo 'Título não disponível'; ?>
+              <?php endif; ?>
+            </h1>
+            <p class="movieGenre">
+              <?php if (isset($filme['GENEROS'])) : ?>
+                <?php echo $filme['GENEROS']; ?>
+              <?php else : ?>
+                <?php echo 'Gênero não disponível'; ?>
+              <?php endif; ?>
+            </p>
           </div>
-        <?php endfor; ?>
-      </div>
-    </div>
-  </div>
+        <?php endforeach; ?>
+        </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+          </div>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+          <script>
+            AOS.init();
+          </script>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
