@@ -29,7 +29,7 @@ require_once '../DAO/database/buscar_filmes.php';
       <a href="landing.html" class="categoria">Landing Page</a>
       <a href="management.html" class="cadastro">Gestão</a>
       <a href="#" class="suporte">Meu Perfil</a>
-      <a href="#" class="suporte"><?php echo $nome; ?></a>
+      <a href="#" class="suporte"><?php echo $user['NOME']; ?></a>
       <a href="../Controller/logout.php">Sair</a>
       <div class="search-box">
         <input type="text" placeholder="Digite aqui">

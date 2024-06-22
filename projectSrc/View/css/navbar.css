@@ -3,55 +3,37 @@ header {
   background-color: black;
   color: #fff;
   display: flex;
-  align-items: center; /* Adicionando alinhamento vertical */
+  align-items: center; /* Alinhamento vertical */
 }
-
 
 .site-name {
   font-weight: bold;
   font-size: 28px;
   color: #e50914;
+  margin-left: 20px; /* Ajuste para alinhamento em telas pequenas */
 }
 
 nav {
-  display: flex; /* Para alinhar os itens da navegação horizontalmente */
-  align-items: center; /* Para alinhar os itens verticalmente */
-  margin-left: auto; /* Ajuste para alinhar à direita */
-  margin-right: 30px; /* Ajuste para alinhar à direita */
+  display: flex; /* Alinha os itens da navegação horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente */
+  margin-left: auto; /* Alinha à direita */
+  margin-right: 20px; /* Ajuste para alinhamento em telas pequenas */
 }
 
-
-.categoria,
-.cadastro,
-.suporte,
-.perfil {
+nav a {
   color: #fff;
-  margin-left: 30px;
+  margin-left: 20px; /* Espaçamento entre os itens */
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  display: inline-block; /* Para que possam ser centralizadas */
+  display: inline-block; /* Centraliza os itens */
   text-align: center; /* Centraliza o texto horizontalmente */
-  width: 150px; /* Define uma largura para as palavras */
+  width: 150px; /* Define uma largura para os itens */
+  transition: color 0.3s; /* Transição suave para a cor */
 }
-
-.categoria + .cadastro,
-.cadastro + .suporte,
-.suporte + .perfil {
-  margin-left: 20px;
-}
-
 
 nav a:hover {
   text-decoration: underline;
-}
-
-.categoria:hover,
-.cadastro:hover,
-.suporte:hover,
-.perfil:hover, 
-.search-box:hover,
-.fas:hover {
   color: #e50914;
 }
 
@@ -61,8 +43,8 @@ nav a:hover {
   border-radius: 20px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo do campo de busca */
+  margin-right: 20px; /* Ajuste para alinhamento em telas pequenas */
 }
-
 
 .search-box input[type="text"] {
   flex: 1;
@@ -83,11 +65,41 @@ nav a:hover {
   border: none;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s;
   font-weight: bold;
   font-size: 20px;
+  transition: background-color 0.3s; /* Transição suave para o background */
 }
 
-search-box a:hover {
-  background-color: black; /* Cor do botão de busca ao passar o mouse */
+.search-box a:hover {
+  background-color: #333; /* Cor do botão de busca ao passar o mouse */
+}
+
+/* Media queries para telas pequenas */
+@media screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-name {
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    margin-top: 20px;
+    margin-left: 15px;
+    flex-direction: column;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin: 5px 15px;
+    width: auto;
+  }
+
+  .search-box {
+    margin: 20px 15px;
+    margin-right: 0; /* Remover margem à direita */
+  }
 }
