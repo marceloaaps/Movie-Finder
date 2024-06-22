@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Usuário - Movie Finder</title>
-    <link rel="stylesheet" href="/projectSrc/View/css/perfil.css">
+    <link rel="stylesheet" href="css/perfil.css">
 </head>
 <body>
     <div class="container">
@@ -24,7 +24,10 @@
                 <p><strong>22 anos</strong></p>
             </div>
             <textarea id="bioTextarea" class="bio" placeholder="O seu espaço de ser você..."></textarea>
-            <button class="btn-delete-account" onclick="excluirConta()">Excluir Conta</button>
+            <div class="account-buttons">
+                <button class="btn-back" onclick="voltar()">Voltar</button>
+                <button class="btn-delete-account" onclick="excluirConta()">Excluir Conta</button>
+            </div>
         </div>
         <div class="profile-right">
             <form id="profileForm">
@@ -60,9 +63,20 @@
                     <label for="dob">Data de Nascimento</label>
                     <input type="date" id="dob">
                 </div>
-                <div class="form-group">
-                    <label for="plano">Tipo de Plano</label>
-                    <input type="text" id="plano">
+                <div class="form-group plano-group">
+                    <label>Tipo de Plano</label>
+                    <div class="radio-group">
+                        <input type="radio" id="mensal" name="plano" value="mensal" required>
+                        <label for="mensal">Mensal = 25,99</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="bimestral" name="plano" value="bimestral" required>
+                        <label for="bimestral">Bimestral = 20,99</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="anual" name="plano" value="anual" required>
+                        <label for="anual">Anual = 15,99</label>
+                    </div>
                 </div>
                 <button type="submit" class="btn-update">Atualizar Informações</button>
             </form>
@@ -86,6 +100,11 @@
 
         function excluirConta() {
             alert('Conta excluída!');
+        }
+
+        function voltar() {
+            window.location.href = 'http://localhost/trabalho/movieFinder/projectSrc/View/landing.php';
+            
         }
 
         document.getElementById('profileForm').addEventListener('submit', function(event) {

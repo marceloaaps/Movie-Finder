@@ -1,5 +1,3 @@
-/* perfil.css */
-
 body {
     background-color: #000;
     color: #fff;
@@ -49,13 +47,13 @@ body {
     background-color: red;
     color: white;
     border: none;
-    padding: 8px 16px; /* Tamanho reduzido dos botões */
+    padding: 8px 16px;
     cursor: pointer;
-    border-radius: 8px; /* Bordas arredondadas */
+    border-radius: 8px;
 }
 
 .btn-remove {
-    margin-left: 10px; /* Espaçamento entre os botões */
+    margin-left: 10px;
 }
 
 .user-info {
@@ -66,7 +64,7 @@ body {
 .user-info p {
     margin: 5px 0;
     font-weight: bold;
-    font-family: 'Arial', sans-serif; /* Você pode substituir por outra fonte se desejar */
+    font-family: 'Arial', sans-serif;
 }
 
 .bio {
@@ -81,25 +79,30 @@ body {
     resize: none;
 }
 
-.btn-delete-account {
+.account-buttons {
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+.btn-back, .btn-delete-account {
     background-color: red;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 20px;
-    position: absolute;
-    bottom: 20px;
 }
 
 .profile-right {
     background-color: #222;
     padding: 20px;
     width: 70%;
-    max-height: 90vh; /* Define uma altura máxima em 80% da altura da tela */
-    overflow-y: auto; /* Adiciona barra de rolagem caso o conteúdo ultrapasse a altura máxima */
-    box-sizing: border-box; /* Mantém o padding dentro da largura especificada */
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
 .form-group {
@@ -118,6 +121,31 @@ body {
     border-radius: 5px;
     background-color: #333;
     color: white;
+}
+
+.plano-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.radio-group {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    width: 1vw;
+}
+
+.radio-group label {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    align-items: center;
 }
 
 .btn-update {
