@@ -1,6 +1,8 @@
 <!-- Feito por Marcelo -->
 <?php
 require_once '../Controller/auth_check.php';
+require_once '../DAO/database/db_connect.php';
+require_once '../DAO/database/buscar_filmes.php';
 
 ?>
 
@@ -44,17 +46,15 @@ require_once '../Controller/auth_check.php';
           <div class="infos">
             <h1 class="movieName">Scarface</h1>
             <p class="movieText">Scarface' foi indicado a três Globos de Ouro: melhor ator de drama (Al Pacino), melhor coadjuvante de drama (Steven Bauer) e melhor trilha sonora original (Giorgio Moroder). A produção ficou em 10º lugar na lista dos dez melhores filmes de gângster do American Film Institute.</p>
-            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'" >
+            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'">
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                <path
-                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                 </path>
               </svg>
               <span class="text">SAIBA MAIS</span>
               <span class="circle"></span>
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                <path
-                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                 </path>
               </svg>
             </button>
@@ -67,17 +67,15 @@ require_once '../Controller/auth_check.php';
           <div class="infos">
             <h1 class="movieName">Sons of Anarchy</h1>
             <p class="movieText">Uma gangue de motoqueiros segue suas próprias leis e comanda, por debaixo dos panos, o tráfico de armas na região da aparentemente pacata da cidade de Charming, protegendo-a contra forasteiros hostis.</p>
-            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'" >
+            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'">
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                <path
-                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                 </path>
               </svg>
               <span class="text">SAIBA MAIS</span>
               <span class="circle"></span>
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                <path
-                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                 </path>
               </svg>
             </button>
@@ -88,19 +86,17 @@ require_once '../Controller/auth_check.php';
         <div class="slideOne">
           <img src="img/pp.jpg" class="d-block w-100" id="slideOneBG" alt="Slide 3">
           <div class="infos">
-            <h1 class="movieName" >Pulp Fiction</h1>
+            <h1 class="movieName">Pulp Fiction</h1>
             <p class="movieText">Assassino que trabalha para a máfia se apaixona pela esposa de seu chefe quando é convidado a acompanhá-la, um boxeador descumpre sua promessa de perder uma luta e um casal tenta um assalto que rapidamente sai do controle.</p>
-            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'" >
+            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'">
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                <path
-                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                 </path>
               </svg>
               <span class="text" href="#">SAIBA MAIS</span>
               <span class="circle"></span>
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                <path
-                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                 </path>
               </svg>
             </button>
@@ -118,345 +114,35 @@ require_once '../Controller/auth_check.php';
     </a>
   </div>
   <div class="containerThings" data-aos="fade-right">
-    
-  <h1 class="p2" data-aos="fade-up">Boa noite, Marcelo!</h1>
+
+    <h1 class="p2" data-aos="fade-up">Boa noite, Marcelo!</h1>
     <h1 id="p">Filmes em Alta</h1>
     <div class="movieBlock">
       <div class="movies-scroller">
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
+        <?php for ($i = 0; $i < count($filme_ids); $i++) : ?>
+          <div class="moviebox">
+            <img src="gots.jpeg" class="miniImg" onerror="this.src='<?php echo $posters[$i]; ?>'" />
+            <h1 class="movieMiniName"><?php echo $titulos[$i]; ?></h1>
+            <p class="movieGenre"><?php echo $lancamentos[$i]; ?></p>
+          </div>
+        <?php endfor; ?>
       </div>
     </div>
-    
+
     <h1 id="p">Filmes Recomendados</h1>
     <div class="movieBlock">
-      <div class="movies-scroller">
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-      </div>
-    </div>
-    
-    <h1 id="p">Filmes Oscar</h1>
-    <div class="movieBlock">
-      <div class="movies-scroller">
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-      </div>
-    </div>
-    
-    <h1 id="p">Animes em Alta</h1>
-    <div class="movieBlock">
-      <div class="movies-scroller">
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-      </div>
-    </div>
-    
-    <h1 id="p">Dramas Coreanos</h1>
-    <div class="movieBlock">
-      <div class="movies-scroller">
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-      </div>
-    </div>
-    
-    <h1 id="p">Filmes de Ação</h1>
-    <div class="movieBlock">
-      <div class="movies-scroller">
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
-        <div class="moviebox">
-          <img src="gots.jpeg" class="miniImg" onerror="this.src='" />
-          <h1 class="movieMiniName">PLACEHOLDER</h1>
-          <p class="movieGenre">Placeholder</p>
-        </div>
+    <div class="movies-scroller">
+        <?php for ($i = 0; $i < count($filme_ids); $i++) : ?>
+          <div class="moviebox">
+            <img src="gots.jpeg" class="miniImg" onerror="this.src='<?php echo $posters[$i]; ?>'" />
+            <h1 class="movieMiniName"><?php echo $titulos[$i]; ?></h1>
+            <p class="movieGenre"><?php echo $lancamentos[$i]; ?></p>
+          </div>
+        <?php endfor; ?>
       </div>
     </div>
   </div>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init();
@@ -464,7 +150,7 @@ require_once '../Controller/auth_check.php';
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+
 </body>
 
 </html>
