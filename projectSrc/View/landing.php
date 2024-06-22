@@ -141,6 +141,19 @@ require_once '../DAO/database/buscar_filmes.php';
         <?php endfor; ?>
       </div>
     </div>
+
+    <h1 id="p">Filmes de Ação</h1>
+    <div class="movieBlock">
+    <div class="movies-scroller">
+        <?php for ($i = 0; $i < count($filme_ids); $i++) : ?>
+          <div class="moviebox">
+            <img src="gots.jpeg" class="miniImg" onerror="this.src='<?php echo $posters[$i]; ?>'" />
+            <h1 class="movieMiniName"><?php echo $titulos[$i]; ?></h1>
+            <p class="movieGenre"><?php echo $lancamentos[$i]; ?></p>
+          </div>
+        <?php endfor; ?>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
