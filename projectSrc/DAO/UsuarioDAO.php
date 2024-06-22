@@ -120,30 +120,7 @@ class UsuarioDAO {
         
         // Retorna true se houver alguma linha no resultado, indicando que o email já está cadastrado
         return $stmt->num_rows > 0;
-    }
-
-    public function dadosUsuario($email) {
-        $nome = '';
-    
-        // Preparar e executar a consulta SQL usando $this->conn
-        $sql = "SELECT NOME FROM USUARIOS WHERE EMAIL = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("s", $email); // "s" indica que $email é uma string
-        $stmt->execute();
-    
-        // Vincular resultado da consulta
-        $stmt->bind_result($nome);
-    
-        // Fetch resultado
-        $stmt->fetch();
-    
-        // Verificar se $nome foi definido (ou seja, se a consulta retornou resultados)
-        if (!empty($nome)) {
-            return $nome;
-        } else {
-            return false; // Retorna falso se o usuário não foi encontrado
-        }
-    }    
+    }   
 
 }
 ?>

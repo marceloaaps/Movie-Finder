@@ -12,7 +12,7 @@ if (isset($_SESSION['email'])) {
 
     try {
         // Preparar a consulta SQL para obter o nome associado ao email
-        $stmt = $conn->prepare("SELECT NOME FROM USUARIOS WHERE EMAIL = ?");
+        $stmt = $conn->prepare("SELECT * FROM USUARIOS WHERE EMAIL = ?");
         $stmt->bind_param('s', $email);
         $stmt->execute();
 
@@ -21,8 +21,7 @@ if (isset($_SESSION['email'])) {
 
         // Verificar se encontrou algum resultado
         if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $nome = $row['NOME'];
+            $user = $result->fetch_assoc();
         } else {
         }
 
