@@ -23,58 +23,58 @@ $idade = $hoje->diff($data_nascimento)->y; // Calcula a diferença em anos
         <div class="profile-left">
             <div class="avatar">
                 <img id="profileImage" src="https://via.placeholder.com/150" alt="Foto do Usuário">
-                <input type="file" id="uploadInput" style="display: none;">
-                <div class="button-group">
-                    <button class="btn-upload" onclick="document.getElementById('uploadInput').click()">Alterar Foto</button>
-                    <button class="btn-remove" onclick="removePhoto()">Remover Foto</button>
-                </div>
             </div>
             <div class="user-info">
                 <p><strong><?php echo $user['NOME']; ?></strong></p>
                 <p><strong><?php echo $user['EMAIL']; ?></strong></p>
-                <p><strong><?php echo "Plano: ",$user['PLANO']; ?></strong></p>
+                <p><strong><?php echo "Plano: " . $user['PLANO']; ?></strong></p>
                 <p><strong><?php echo $idade; ?></strong></p>
             </div>
             <textarea id="bioTextarea" class="bio" placeholder="O seu espaço de ser você..."></textarea>
             <div class="account-buttons">
-                <button class="btn-back" onclick="voltar()"><a href="landing.php">Voltar</a></button>
-                <button class="btn-delete-account" onclick="excluirConta()">Excluir Conta</button>
+                <button class="btn-back" onclick="window.location.href='landing.php'">Voltar</button>
+                <form action="../DAO/ExcluirUsuario.php" method="post">
+                    <button type="submit" class="btn-delete-account" >Excluir Conta</button>
+                </form>
             </div>
         </div>
         <div class="profile-right">
-            <form id="profileForm">
+            <form id="profileForm" method="post" action="../DAO/EditarDados.php">
                 <div class="form-group">
                     <label for="name">Nome Completo</label>
-                    <input type="text" id="name" placeholder="Digite seu nome" value="<?php echo $user['NOME']; ?>">
+                    <input type="text" id="name" name="nome" placeholder="Digite seu nome" value="<?php echo $user['NOME']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="password">Senha</label>
-                    <input type="password" id="password" placeholder="Digite sua senha" value="<?php echo $user['SENHA']; ?>">
+                    <input type="password" id="password" name="senha" placeholder="Digite sua senha" value="" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Repita a Senha</label>
+                    <input type="password" id="confirmPassword" name="confirm_senha" placeholder="Repita sua senha" value="" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Digite seu email" value="<?php echo $user['EMAIL']; ?>">
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" value="<?php echo $user['EMAIL']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="phone">Telefone</label>
-                    <input type="tel" id="phone" placeholder="Digite seu telefone" value="<?php echo $user['TELEFONE']; ?>">
+                    <input type="tel" id="phone" name="telefone" placeholder="Digite seu telefone" value="<?php echo $user['TELEFONE']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="address">Endereço</label>
-                    <input type="text" id="address" placeholder="Digite seu endereço" value="<?php echo $user['ENDERECO']; ?>">
+                    <input type="text" id="address" name="endereco" placeholder="Digite seu endereço" value="<?php echo $user['ENDERECO']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" placeholder="Digite sua cidade" value="<?php echo $user['CIDADE']; ?>">
+                    <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" value="<?php echo $user['CIDADE']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="estado">Estado</label>
-                    <input type="text" id="estado" placeholder="Digite seu estado" value="<?php echo $user['ESTADO']; ?>">
+                    <input type="text" id="estado" name="estado" placeholder="Digite seu estado" value="<?php echo $user['ESTADO']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="dob">Data de Nascimento</label>
-                    <input type="date" id="dob" value="<?php echo ($user['DATA_NASCIMENTO']); ?>"
-                    >
+                    <input type="date" id="dob" name="data_nascimento" value="<?php echo $user['DATA_NASCIMENTO']; ?>">
                 </div>
                 <div class="form-group plano-group">
                     <label>Tipo de Plano</label>
@@ -96,34 +96,25 @@ $idade = $hoje->diff($data_nascimento)->y; // Calcula a diferença em anos
         </div>
     </div>
     <script>
-        document.getElementById('uploadInput').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('profileImage').src = e.target.result;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
+    // Função para verificar se as senhas coincidem
+    function validatePassword() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
 
-        function removePhoto() {
-            document.getElementById('profileImage').src = 'https://via.placeholder.com/150';
+        if (password != confirmPassword) {
+            alert("As senhas não coincidem!");
+            return false; // Impede o envio do formulário
         }
+        return true; // Permite o envio do formulário
+    }
 
-        function excluirConta() {
-            alert('Conta excluída!');
+    // Adiciona um listener para o evento de submit do formulário
+    document.getElementById("profileForm").addEventListener("submit", function(event) {
+        if (!validatePassword()) {
+            event.preventDefault(); // Impede o envio do formulário se as senhas não coincidirem
         }
-
-        function voltar() {
-            window.location.href = 'http://localhost/trabalho/movieFinder/projectSrc/View/landing.php';
-            
-        }
-
-        document.getElementById('profileForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Informações atualizadas!');
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
+

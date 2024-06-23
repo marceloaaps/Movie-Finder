@@ -114,7 +114,7 @@ require_once '../DAO/database/buscar_filmes.php';
   </div>
 
   <div class="containerThings" data-aos="fade-right">
-    <h1 class="p2" data-aos="fade-up">Boa noite, Marcelo!</h1>
+    <h1 class="p2" data-aos="fade-up">Boa noite, <?php echo $user['NOME'];?></h1>
     <h1 id="p">Filmes em Alta</h1>
     <div class="movieBlock">
       <div class="movies-scroller">

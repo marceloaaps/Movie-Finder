@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($usuarioDAO->salvar($usuario)) {
             echo "<script>";
             echo "alert('Usuário salvo com sucesso!');";
-            echo "setTimeout(function() { window.location.href = '../View/login.php'; }, 2000);"; // Redireciona após 2 segundos
+            echo "setTimeout(function() { window.location.href = '../View/login.php'; }, 2);"; // Redireciona após 2 milesegundos
             echo "</script>";
 
         } else {

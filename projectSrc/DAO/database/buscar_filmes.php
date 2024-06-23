@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT ID_FILME, TITLE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS";
+$sql = "SELECT ID_FILME, TITLE, GENEROS, CAMINHO_POSTER FROM vw_filmes_generos";
 $result = $conn->query($sql);
 
 $id_filme = array();
