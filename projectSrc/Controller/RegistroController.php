@@ -35,9 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         // Salvar o usuário se o e-mail não estiver cadastrado
         if ($usuarioDAO->salvar($usuario)) {
-            echo "<script>alert('Usuário salvo com sucesso!');</script>";
-            // Redirecionar para a página desejada
-            // header("Location: pagina_desejada.php");
+            echo "<script>";
+            echo "alert('Usuário salvo com sucesso!');";
+            echo "setTimeout(function() { window.location.href = '../View/login.php'; }, 2000);"; // Redireciona após 2 segundos
+            echo "</script>";
+
         } else {
             echo "<script>alert('Erro ao registrar o usuário no banco de dados.');</script>";
         }

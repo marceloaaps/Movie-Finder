@@ -2,9 +2,8 @@
 <?php
 require_once '../Controller/auth_check.php';
 require_once '../DAO/database/db_connect.php';
+require_once '../DAO/DadosUsuario.php';
 require_once '../DAO/database/buscar_filmes.php';
-
-
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +28,7 @@ require_once '../DAO/database/buscar_filmes.php';
       <a href="landing.html" class="categoria">Landing Page</a>
       <a href="management.html" class="cadastro">Gestão</a>
       <a href="#" class="suporte">Meu Perfil</a>
-      <a href="#" class="suporte"><?php echo $user['NOME']; ?></a>
+      <a href="#" class="suporte"><a href="perfil.php"><?php echo $user['NOME'];?></a> </a>
       <a href="../Controller/logout.php">Sair</a>
       <div class="search-box">
         <input type="text" placeholder="Digite aqui">

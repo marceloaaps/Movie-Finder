@@ -1,4 +1,5 @@
 <?php
+require_once '../DAO/database/db_connect.php';
 
 // Definição da classe UsuarioDAO que gerencia as operações de dados para a entidade Usuario.
 
@@ -121,6 +122,6 @@ class UsuarioDAO {
         // Retorna true se houver alguma linha no resultado, indicando que o email já está cadastrado
         return $stmt->num_rows > 0;
     }   
-
+    
 }
 ?>
