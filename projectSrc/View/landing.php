@@ -124,13 +124,13 @@ require_once '../DAO/database/buscar_filmes.php';
             <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
               <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
             <?php endif; ?>
-            <h1 class="movieMiniName">
+            <a href="detalhamento.php"><h1 class="movieMiniName">
               <?php if (isset($filme['TITLE'])) : ?>
                 <?php echo $filme['TITLE']; ?>
               <?php else : ?>
                 <?php echo 'Título não disponível'; ?>
               <?php endif; ?>
-            </h1>
+            </h1></a>
             <p class="movieGenre">
               <?php if (isset($filme['GENEROS'])) : ?>
                 <?php echo $filme['GENEROS']; ?>
