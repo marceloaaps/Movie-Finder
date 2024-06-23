@@ -18,6 +18,7 @@ $idade = $hoje->diff($data_nascimento)->y; // Calcula a diferença em anos
     <title>Perfil de Usuário - Movie Finder</title>
     <link rel="stylesheet" href="css/perfil.css">
 </head>
+
 <body>
     <div class="container">
         <div class="profile-left">
