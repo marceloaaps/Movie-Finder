@@ -30,10 +30,12 @@ require_once '../DAO/database/buscar_filmes.php';
       <a href="#" class="suporte">Meu Perfil</a>
       <a href="#" class="suporte"><a href="perfil.php"><?php echo $user['NOME'];?></a> </a>
       <a href="../Controller/logout.php">Sair</a>
-      <div class="search-box">
-        <input type="text" placeholder="Digite aqui">
-        <a href="#"><i class="fas fa-search"></i></a>
-      </div>
+
+      <form method="POST" class="search-box" action="../DAO/BuscarFilmes.php">
+          <input type="text" name="busca" placeholder="Digite aqui">
+          <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+
     </nav>
   </header>
 
