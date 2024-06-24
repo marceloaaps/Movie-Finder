@@ -1,17 +1,9 @@
 <?php
-
-// Define as credenciais do servidor de banco de dados
 require_once '../DAO/database/db_connect.php';
-
-// Criando a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificando a conexão
 if ($conn->connect_error) {
-    // Se ocorrer um erro na conexão, interrompe a execução do script e exibe uma mensagem de erro
     die("Falha na conexão: " . $conn->connect_error);
 }
-
 $sql = "SELECT 
     ID_FILME,
     TITLE,
@@ -20,7 +12,7 @@ $sql = "SELECT
     GENEROS,
     CAMINHO_POSTER 
 FROM VW_FILMES_GENEROS 
-WHERE ID_FILME = 5";
+WHERE ID_FILME = 55";
 $result = $conn->query($sql);
 
 $id_filme = array();
@@ -49,8 +41,4 @@ if ($result->num_rows > 0) {
         $generos[] = $filme;
     }
 }
-
-
-
-
 ?>
