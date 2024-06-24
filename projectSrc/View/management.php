@@ -1,4 +1,10 @@
 <!-- Feito por Marcelo -->
+<?php
+require_once '../Controller/auth_check.php';
+require_once '../DAO/database/db_connect.php';
+require_once '../DAO/DadosUsuario.php';
+require_once '../DAO/database/buscar_filmes.php';
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,6 +21,7 @@
   <title>Gestão Safadosflix</title>
 </head>
 
+
 <body id="background">
   <header>
     <div class="site-name">Movie Finder</div>
@@ -22,7 +29,8 @@
       <a href="landing.html" class="categoria">Landing Page</a>
       <a href="management.html" class="cadastro">Gestão</a>
       <a href="#" class="suporte">Meu Perfil</a>
-      <a href="login.html" class="perfil">Sair</a>
+      <a href="#" class="suporte"><a href="perfil.php"><?php echo $user['NOME'];?></a> </a>
+      <a href="../Controller/logout.php">Sair</a>
       <div class="search-box">
         <input type="text" placeholder="Digite aqui">
         <a href="#"><i class="fas fa-search"></i></a>
@@ -30,6 +38,7 @@
     </nav>
   </header>
 
+<body id="background">
   <div id="container">
     <div class="containerThings">
 

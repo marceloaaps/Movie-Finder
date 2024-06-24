@@ -1,6 +1,6 @@
 <?php
-require_once '../DAO/UsuarioDAO.php'; // Caminho do seu DAO
-require_once '../Controller/auth_check.php'; // Caminho correto para Auth.php
+require_once '../DAO/UsuarioDAO.php'; 
+require_once '../Controller/auth_check.php';
 
 
 session_destroy();
