@@ -22,22 +22,21 @@ require_once '../DAO/database/buscar_filmes.php';
 </head>
 
 <body id="background">
-  <header>
-    <div class="site-name">Movie Finder</div>
-    <nav>
-      <a href="landing.html" class="categoria">Landing Page</a>
-      <a href="management.html" class="cadastro">Gestão</a>
-      <a href="#" class="suporte">Meu Perfil</a>
-      <a href="#" class="suporte"><a href="perfil.php"><?php echo $user['NOME'];?></a> </a>
+<header>
+  <div class="site-name">Movie Finder</div>
+  <nav>
+    <a href="landing.php" class="categoria home-page">Home Page</a>
+    <div class="right-section">
+      <a href="#" class="suporte"><a href="perfil.php"><?php echo $user['NOME'];?></a></a>
       <a href="../Controller/logout.php">Sair</a>
-
       <form method="POST" class="search-box" action="/View/resultadoBusca.php">
-          <input type="text" name="busca" placeholder="Digite aqui">
-          <button type="submit"><i class="fas fa-search"></i></button>
+        <input type="text" name="busca" placeholder="Digite aqui">
+        <button type="submit"><i class="fas fa-search"></i></button>
       </form>
+    </div>
+  </nav>
+</header>
 
-    </nav>
-  </header>
 
   <div id="carouselExample" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
