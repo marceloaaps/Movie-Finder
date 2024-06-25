@@ -14,11 +14,15 @@
 }
 
 body {
-    height: 10rem;
-    background-color: var(--cor-principal);
+    font-family: sans-serif;
+    background-image: url(../img/netflix-bg.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100%;
 }
 
 .apresentacao {
+    font-family: sans-serif;
     padding: 1rem 1rem 1rem 1rem;
     display: flex;
     align-items: center;
