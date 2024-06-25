@@ -27,7 +27,7 @@ require_once '../DAO/database/buscar_filmes.php';
     <nav>
         <div class="left-section">
             <a href="landing.php" class="categoria home-page">Home Page</a>
-            <a href="management.php" class="categoria home-page">Gestão</a>
+            <a href="management.php" class="categoria management">Gestão</a>
         </div>
         <div class="right-section">
             <a href="perfil.php"><?php echo $user['NOME'];?></a>

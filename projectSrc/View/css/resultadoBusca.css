@@ -1,23 +1,33 @@
+/* 
+Seguintes cores em hexcode:
+Cor Principal (Preto) -#0e0f12
+Cor Secundária (Cinza escuro) - #303030
+Botões/interações (Vermelho) - #e50914
+Hover nos botões, etc (Vermelho mais escuro) - #c11119
+Vermelho Onclick - #99161d */
+
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #0e0f12;
 }
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-    background-color: #fff;
+    background-color:  #303030;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .movie {
     display: flex;
     margin-bottom: 20px;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #202020;
 }
 .movie img {
     max-width: 150px;
@@ -28,6 +38,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: red;
 }
 .movie-title {
     font-size: 24px;
