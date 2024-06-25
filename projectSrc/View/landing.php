@@ -3,7 +3,6 @@ require_once '../Controller/auth_check.php';
 require_once '../DAO/database/db_connect.php';
 require_once '../DAO/DadosUsuario.php';
 require_once '../DAO/database/buscar_filmes.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -22,20 +21,23 @@ require_once '../DAO/database/buscar_filmes.php';
 </head>
 
 <body id="background">
-<header>
-  <div class="site-name">Movie Finder</div>
-  <nav>
-    <a href="landing.php" class="categoria home-page">Home Page</a>
-    <div class="right-section">
-      <a href="#" class="suporte"><a href="perfil.php"><?php echo $user['NOME'];?></a></a>
-      <a href="../Controller/logout.php">Sair</a>
-      <form method="POST" class="search-box" action="resultadoBusca.php">
-        <input type="text" name="busca" placeholder="Digite aqui">
-        <button type="submit"><i class="fas fa-search"></i></button>
-      </form>
-    </div>
-  </nav>
-</header>
+  <header>
+            <div class="site-name">Movie Finder</div>
+            <nav>
+                <div class="left-section">
+                    <a href="landing.php" class="categoria home-page">Home Page</a>
+                    <a href="management.php" class="categoria home-page">Gestão</a>
+                </div>
+                <div class="right-section">
+                    <a href="perfil.php"><?php echo $user['NOME'];?></a>
+                    <a href="../Controller/logout.php">Sair</a>
+                    <form method="POST" class="search-box" action="resultadoBusca.php">
+                        <input type="text" name="busca" placeholder="Digite aqui">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </nav>
+        </header>
 
 
 
