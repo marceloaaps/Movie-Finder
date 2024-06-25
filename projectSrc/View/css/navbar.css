@@ -6,21 +6,23 @@ header {
   align-items: center; /* Alinhamento vertical */
 }
 
-.site-name {
+header .site-name {
   font-weight: bold;
   font-size: 28px;
   color: #e50914;
   margin-left: 20px; /* Ajuste para alinhamento em telas pequenas */
 }
 
-nav {
+header nav {
   display: flex; /* Alinha os itens da navegação horizontalmente */
   align-items: center; /* Alinha os itens verticalmente */
   margin-left: auto; /* Alinha à direita */
   margin-right: 20px; /* Ajuste para alinhamento em telas pequenas */
+  flex-grow: 1; /* Permite que o nav ocupe o espaço restante */
 }
 
-nav a {
+header nav .home-page {
+  margin-right: auto; /* Alinha o "Home Page" à esquerda */
   color: #fff;
   margin-left: 20px; /* Espaçamento entre os itens */
   text-decoration: none;
@@ -32,21 +34,43 @@ nav a {
   transition: color 0.3s; /* Transição suave para a cor */
 }
 
-nav a:hover {
+header nav .home-page:hover {
   text-decoration: underline;
   color: #e50914;
 }
 
-.search-box {
+header nav .right-section {
+  display: flex; /* Alinha os itens da seção à direita horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente */
+  margin-left: auto; /* Alinha à direita */
+}
+
+header nav .right-section a {
+  color: #fff;
+  margin-left: 20px; /* Espaçamento entre os itens */
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block; /* Centraliza os itens */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  transition: color 0.3s; /* Transição suave para a cor */
+}
+
+header nav .right-section a:hover {
+  text-decoration: underline;
+  color: #e50914;
+}
+
+header .search-box {
   display: flex;
   align-items: center;
   border-radius: 20px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo do campo de busca */
-  margin-right: 20px; /* Ajuste para alinhamento em telas pequenas */
+  margin-left: 20px; /* Ajuste para espaçamento */
 }
 
-.search-box input[type="text"] {
+header .search-box input[type="text"] {
   flex: 1;
   padding: 10px;
   border: none;
@@ -55,11 +79,11 @@ nav a:hover {
   outline: none;
 }
 
-.search-box input[type="text"]::placeholder {
+header .search-box input[type="text"]::placeholder {
   color: #fff; /* Cor do texto do placeholder */
 }
 
-.search-box a {
+header .search-box button {
   padding: 15px;
   background-color: black; /* Cor do botão de busca */
   border: none;
@@ -70,7 +94,7 @@ nav a:hover {
   transition: background-color 0.3s; /* Transição suave para o background */
 }
 
-.search-box a:hover {
+header .search-box button:hover {
   background-color: #333; /* Cor do botão de busca ao passar o mouse */
 }
 
@@ -81,25 +105,33 @@ nav a:hover {
     align-items: flex-start;
   }
 
-  .site-name {
+  header .site-name {
     margin-left: 15px;
     margin-bottom: 10px;
   }
 
-  nav {
+  header nav {
     margin-top: 20px;
     margin-left: 15px;
     flex-direction: column;
   }
 
-  nav a {
-    font-size: 16px;
-    margin: 5px 15px;
-    width: auto;
+  header nav .home-page {
+    margin-right: auto;
   }
 
-  .search-box {
-    margin: 20px 15px;
-    margin-right: 0; /* Remover margem à direita */
+  header nav .right-section {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  header nav .right-section a,
+  header .search-box {
+    margin: 5px 0;
+  }
+
+  header .search-box {
+    margin-left: 0; /* Remover margem à esquerda */
   }
 }

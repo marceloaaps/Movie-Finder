@@ -10,7 +10,7 @@ if (!$conn) {
 }
 
 // Usando declarações preparadas para segurança contra injeção de SQL
-$stmt = $conn->prepare("SELECT * FROM vw_filmes_generos WHERE TITLE LIKE ?");
+$stmt = $conn->prepare("SELECT * FROM VW_FILMES_GENEROS WHERE TITLE LIKE ?");
 if ($stmt === false) {
     die("Erro na preparação da consulta: " . $conn->error);
 }
