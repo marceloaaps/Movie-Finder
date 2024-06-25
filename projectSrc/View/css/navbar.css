@@ -1,6 +1,6 @@
 header {
   padding: 15px;
-  background-color: black;
+  background-color: rgb(20, 20, 20);
   color: #fff;
   display: flex;
   align-items: center; /* Alinhamento vertical */

@@ -55,7 +55,6 @@ require_once '../DAO/BuscarFilmes.php';
                 echo '</div>';
                 echo '</div>';
             }
-            
         }
 
         $stmt->close();

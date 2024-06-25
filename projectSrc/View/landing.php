@@ -49,7 +49,7 @@ require_once '../DAO/database/buscar_filmes.php';
           <img src="img/gots.jpg" class="d-block w-100" id="slideOneBG" alt="Slide 1">
           <div class="infos">
             <h1 class="movieName">Scarface</h1>
-            <p class="movieText">Scarface' foi indicado a três Globos de Ouro: melhor ator de drama (Al Pacino), melhor coadjuvante de drama (Steven Bauer) e melhor trilha sonora original (Giorgio Moroder). A produção ficou em 10º lugar na lista dos dez melhores filmes de gângster do American Film Institute.</p>
+            <p class="movieText">Scarface foi indicado a três Globos de Ouro: melhor ator de drama (Al Pacino), melhor coadjuvante de drama (Steven Bauer) e melhor trilha sonora original (Giorgio Moroder). A produção ficou em 10º lugar na lista dos dez melhores filmes de gângster do American Film Institute.</p>
             <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'">
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
@@ -67,10 +67,10 @@ require_once '../DAO/database/buscar_filmes.php';
       </div>
       <div class="carousel-item">
         <div class="slideOne">
-          <img src="img/vava.jpg" class="d-block w-100" id="slideOneBG" alt="Slide 2">
+          <img src="img/hg.jpg" class="d-block w-100" id="slideOneBG" alt="Slide 2">
           <div class="infos">
-            <h1 class="movieName">Sons of Anarchy</h1>
-            <p class="movieText">Uma gangue de motoqueiros segue suas próprias leis e comanda, por debaixo dos panos, o tráfico de armas na região da aparentemente pacata da cidade de Charming, protegendo-a contra forasteiros hostis.</p>
+            <h1 class="movieName">The Hunger Games</h1>
+            <p class="movieText">A história é estabelecida em um período distópico pós-apocalíptico na nação de Panem, onde meninos e meninas de 12 a 18 anos devem participar dos Jogos Vorazes, um evento anual televisionado no qual os "tributos" precisam lutar até a morte até que sobre apenas um, que é coroado vencedor.</p>
             <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'">
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
@@ -157,7 +157,7 @@ require_once '../DAO/database/buscar_filmes.php';
                     Gênero não disponível
                   <?php endif; ?>
                 </p>
-                <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+                <a id="know" href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
               </div>
             <?php endforeach; ?>
           <?php else : ?>
@@ -202,7 +202,7 @@ require_once '../DAO/database/buscar_filmes.php';
                     Gênero não disponível
                   <?php endif; ?>
                 </p>
-                <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+                <a id="know" href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
               </div>
             <?php endforeach; ?>
           <?php else : ?>
@@ -247,7 +247,7 @@ require_once '../DAO/database/buscar_filmes.php';
                     Gênero não disponível
                   <?php endif; ?>
                 </p>
-                <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+                <a id="know" href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
               </div>
             <?php endforeach; ?>
           <?php else : ?>
@@ -291,7 +291,7 @@ require_once '../DAO/database/buscar_filmes.php';
                     Gênero não disponível
                   <?php endif; ?>
                 </p>
-                <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+                <a id="know" href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
               </div>
             <?php endforeach; ?>
           <?php else : ?>
@@ -334,7 +334,7 @@ require_once '../DAO/database/buscar_filmes.php';
                     Gênero não disponível
                   <?php endif; ?>
                 </p>
-                <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+                <a id="know" href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
               </div>
             <?php endforeach; ?>
           <?php else : ?>
@@ -380,7 +380,7 @@ require_once '../DAO/database/buscar_filmes.php';
                   Gênero não disponível
                 <?php endif; ?>
               </p>
-              <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+              <a id="know" href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
             </div>
           <?php endforeach; ?>
         <?php else : ?>
@@ -424,7 +424,7 @@ require_once '../DAO/database/buscar_filmes.php';
                   Gênero não disponível
                 <?php endif; ?>
               </p>
-              <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+              <a id="know" href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
             </div>
           <?php endforeach; ?>
         <?php else : ?>
@@ -469,7 +469,7 @@ require_once '../DAO/database/buscar_filmes.php';
                   Gênero não disponível
                 <?php endif; ?>
               </p>
-              <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+              <a id="know" href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
             </div>
           <?php endforeach; ?>
         <?php else : ?>

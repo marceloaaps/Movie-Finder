@@ -25,6 +25,12 @@ Vermelho Onclick - #99161d */
     height: 100vh;
 }
 
+.know{
+    color: rgb(255, 255, 255);
+}
+.know:hover{
+    color: red;
+}
 .infos {
     z-index: 1;
     width: 50vh;
