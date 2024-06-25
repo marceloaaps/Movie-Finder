@@ -1,36 +1,13 @@
 <?php
-
-
+// Incluir o arquivo de conexão com o banco de dados ou com as funções de autenticação, se necessário
 require_once '../DAO/database/db_connect.php';
 
-// Iniciar a sessão
+// Verificar se a sessão está iniciada e se a variável de sessão indicando o login do usuário existe
 session_start();
 
-// Verificar se o email está armazenado na sessão
-if (isset($_SESSION['email'])) {
-    $email = $_SESSION['email'];
-
-    try {
-        // Preparar a consulta SQL para obter o nome associado ao email
-        $stmt = $conn->prepare("SELECT * FROM USUARIOS WHERE EMAIL = ?");
-        $stmt->bind_param('s', $email);
-        $stmt->execute();
-
-        // Obter resultado da consulta
-        $result = $stmt->get_result();
-
-        // Verificar se encontrou algum resultado
-        if ($result->num_rows > 0) {
-            $user = $result->fetch_assoc();
-        } else {
-        }
-
-        // Fechar a consulta
-        $stmt->close();
-    } catch(mysqli_sql_exception $e) {
-        echo 'Erro ao consultar o banco de dados: ' . $e->getMessage();
-    }
-} else {
-    echo "Usuário desconhecido";
+if (!isset($_SESSION['email'])) {
+    // Se não estiver logado, redirecionar para a página de login
+    header('Location: login.php');
+    exit; // Encerra o script após redirecionar
 }
-?>
+

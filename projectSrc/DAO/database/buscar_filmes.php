@@ -12,7 +12,9 @@ if ($conn->connect_error) {
 }
 
 
+
 $sql = "SELECT ID_FILME, TITLE, ANO_LANCAMENTO, SINOPSE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS";
+
 $result = $conn->query($sql);
 
 $id_filme = array();

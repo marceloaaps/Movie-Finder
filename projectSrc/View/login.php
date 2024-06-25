@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-cds">
                         <label>Não tem cadastro?</label>
-                        <a href="#">Clique aqui para se registrar</a>
+                        <a href="/View/cadastro.html">Clique aqui para se registrar</a>
                     </div>
                 </div>
                 </div>
