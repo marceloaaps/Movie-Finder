@@ -4,7 +4,7 @@ require_once '../DAO/database/db_connect.php';
 class FilmeController {
     public function detalhes($id) {
         global $conn;
-        $sql = "SELECT * FROM filmes WHERE id = ?";
+        $sql = "SELECT * FROM VW_FILMES_GENEROS WHERE id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("i", $id);
         $stmt->execute();
