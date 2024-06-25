@@ -1,6 +1,6 @@
 header {
   padding: 15px;
-  background-color: black;
+  background-color: rgb(20, 20, 20);
   color: #fff;
   display: flex;
   align-items: center; /* Alinhamento vertical */
@@ -11,6 +11,12 @@ header .site-name {
   font-size: 28px;
   color: #e50914;
   margin-left: 20px; /* Ajuste para alinhamento em telas pequenas */
+}
+
+header nav.left-section{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 header nav {
@@ -38,6 +44,25 @@ header nav .home-page:hover {
   text-decoration: underline;
   color: #e50914;
 }
+
+header nav .management {
+  margin-right: auto; /* Alinha o "Home Page" à esquerda */
+  color: #fff;
+  margin-left: -40px; /* Espaçamento entre os itens */
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block; /* Centraliza os itens */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  width: 150px; /* Define uma largura para os itens */
+  transition: color 0.3s; /* Transição suave para a cor */
+}
+
+header nav .management:hover {
+  text-decoration: underline;
+  color: #e50914;
+}
+
 
 header nav .right-section {
   display: flex; /* Alinha os itens da seção à direita horizontalmente */
