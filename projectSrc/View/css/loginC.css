@@ -8,23 +8,26 @@ Vermelho Onclick - #99161d */
 
 body{
     background-image: url(../img/netflix-bg.jpg);
-    background-repeat: no-repeat; 
+    background-repeat: repeat; 
     background-size: cover; 
     height: 100%;
     font-family: sans-serif;
 }
+
+.container {
+    display: flex;
+    justify-content: center; /* Center the child elements horizontally */
+    align-items: center; /* Center the child elements vertically */
+  }
+  
 .box{
-    
     color: rgb(255, 255, 255);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    position: relative;
     background-color: #080808; /* Cor hexadecimal */
     opacity: 0.85; /* Opacidade entre 0 e 1 */
     padding: 15px;
     border-radius: 15px;
-    width: 30%;
+    width: 35%;
 }
 fieldset{
     border: 3px solid #c11109;
@@ -80,5 +83,5 @@ legend{
     border-radius: 10px;
 }
 #submit:hover{
-    background-image: linear-gradient(to right, rgb(185, 0, 0) , rgb(128, 0, 0));
+    background-image: linear-gradient(to right, rgb(185, 0, 0) , rgb(50, 10, 10));
 }
