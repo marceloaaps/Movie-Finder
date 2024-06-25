@@ -8,47 +8,7 @@ require_once '../DAO/BuscarFilmes.php';
 <head>
     <meta charset="UTF-8">
     <title>Resultados da Pesquisa</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .movie {
-            display: flex;
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        }
-        .movie img {
-            max-width: 150px;
-            margin-right: 20px;
-            border-radius: 8px;
-        }
-        .movie-details {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .movie-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .movie-genre {
-            font-size: 18px;
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="css/resultadoBusca.css">
 </head>
 <body>
     <div class="container">
