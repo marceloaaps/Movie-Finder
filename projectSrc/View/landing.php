@@ -1,9 +1,9 @@
-<!-- Feito por Marcelo -->
 <?php
 require_once '../Controller/auth_check.php';
 require_once '../DAO/database/db_connect.php';
 require_once '../DAO/DadosUsuario.php';
 require_once '../DAO/database/buscar_filmes.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -116,347 +116,373 @@ require_once '../DAO/database/buscar_filmes.php';
   </div>
 
   <div class="containerThings" data-aos="fade-right">
-    <h1 class="p2" data-aos="fade-up">Boa noite, <?php echo $user['NOME'];?></h1>
-    <h1 id="p">Filmes em Alta</h1>
+    <h1 class="p2" data-aos="fade-up">Boa noite, <?php echo $user['NOME']; ?></h1>
     <div class="movieBlock">
-      <div class="movies-scroller">
-        <?php foreach ($filmes as $filme) : ?>
-          <div class="moviebox">
-            <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
-              <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
-            <?php endif; ?>
-
-            <h1 class="movieMiniName">
-              <?php if (isset($filme['TITLE'])) : ?>
-                <?php echo $filme['TITLE']; ?>
-              <?php else : ?>
-                <?php echo 'Título não disponível'; ?>
-              <?php endif; ?>
-            </h1>
-
-            <p class="movieGenre">
-              <?php if (isset($filme['GENEROS'])) : ?>
-                <?php echo $filme['GENEROS']; ?>
-              <?php else : ?>
-                <?php echo 'Gênero não disponível'; ?>
-              <?php endif; ?>
-            </p>
-
-            <?php
-            $filmeUrl = 'detalahemnto5.php'; // página padrão para IDs não mapeados
-            switch ($filme['ID_FILME']) {
-              case 5:
-                $filmeUrl = '../View/detalhamento5.php';
-                break;
-              case 12:
-                $filmeUrl = '../View/detalhamento12.php';
-                break;
-              case 13:
-                $filmeUrl = '../View/detalhamento13.php';
-                break;
-              case 15:
-                $filmeUrl = '../View/detalhamento15.php';
-                break;
-              case 18:
-                $filmeUrl = '../View/detalhamento18.php';
-                break;
-              case 55:
-                $filmeUrl = '../View/detalhamento55.php';
-                break;
-              case 62:
-                $filmeUrl = '../View/detalhamento62.php';
-                break;
-              case 66:
-                $filmeUrl = '../View/detalhamento66.php';
-                break;
-              case 69:
-                $filmeUrl = '../View/detalhamento69.php';
-                break;
-              case 71:
-                $filmeUrl = '../View/detalhamento71.php';
-                break;
-            }
-            ?>
-
-            <a href="<?php echo $filmeUrl; ?>">Clique para saber mais</a>
-          </div>
-        <?php endforeach; ?>
-      </div>
-
-      <h1 id="p">Filmes Recomendados</h1>
+      <h1 id="p">Filmes de Ação</h1>
       <div class="movieBlock">
         <div class="movies-scroller">
-          <?php foreach ($filmes as $filme) : ?>
-            <div class="moviebox">
-              <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
-                <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
-              <?php endif; ?>
+          <?php
 
-              <h1 class="movieMiniName">
-                <?php if (isset($filme['TITLE'])) : ?>
-                  <?php echo $filme['TITLE']; ?>
-                <?php else : ?>
-                  <?php echo 'Título não disponível'; ?>
-                <?php endif; ?>
-              </h1>
+          $sql = "SELECT ID_FILME, TITLE, ANO_LANCAMENTO, SINOPSE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS WHERE GENEROS = 'Action'";
+          $result = $conn->query($sql);
+          $filmes = array();
+          if ($result->num_rows > 0) {
 
-              <p class="movieGenre">
-                <?php if (isset($filme['GENEROS'])) : ?>
-                  <?php echo $filme['GENEROS']; ?>
-                <?php else : ?>
-                  <?php echo 'Gênero não disponível'; ?>
-                <?php endif; ?>
-              </p>
+            while ($row = $result->fetch_assoc()) {
+              $filmes[] = $row;
+            }
+          }
+          ?>
 
-              <?php
-              $filmeUrl = 'detalahemnto5.php'; // página padrão para IDs não mapeados
-              switch ($filme['ID_FILME']) {
-                case 5:
-                  $filmeUrl = '../View/detalhamento5.php';
-                  break;
-                case 12:
-                  $filmeUrl = '../View/detalhamento12.php';
-                  break;
-                case 13:
-                  $filmeUrl = '../View/detalhamento13.php';
-                  break;
-                case 15:
-                  $filmeUrl = '../View/detalhamento15.php';
-                  break;
-                case 18:
-                  $filmeUrl = '../View/detalhamento18.php';
-                  break;
-                case 55:
-                  $filmeUrl = '../View/detalhamento55.php';
-                  break;
-                case 62:
-                  $filmeUrl = '../View/detalhamento62.php';
-                  break;
-                case 66:
-                  $filmeUrl = '../View/detalhamento66.php';
-                  break;
-                case 69:
-                  $filmeUrl = '../View/detalhamento69.php';
-                  break;
-                case 71:
-                  $filmeUrl = '../View/detalhamento71.php';
-                  break;
-              }
-              ?>
-
-              <a href="<?php echo $filmeUrl; ?>">Clique para saber mais</a>
-            </div>
-          <?php endforeach; ?>
-        </div>
-
-        <h1 id="p">Animes em Alta</h1>
-        <div class="movieBlock">
-          <div class="movies-scroller">
+          <?php if (!empty($filmes)) : ?>
             <?php foreach ($filmes as $filme) : ?>
               <div class="moviebox">
-                <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
-                  <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
-                <?php endif; ?>
+                <?php if (isset($filme['CAMINHO_POSTER'])) : ?><img src="<?php echo 'https://image.tmdb.org/t/p/w500' . $filme['CAMINHO_POSTER']; ?>" />
 
+                <?php endif; ?>
                 <h1 class="movieMiniName">
                   <?php if (isset($filme['TITLE'])) : ?>
-                    <?php echo $filme['TITLE']; ?>
+                    <?php echo htmlspecialchars($filme['TITLE']); ?>
                   <?php else : ?>
-                    <?php echo 'Título não disponível'; ?>
+                    Título não disponível
                   <?php endif; ?>
                 </h1>
-
                 <p class="movieGenre">
                   <?php if (isset($filme['GENEROS'])) : ?>
-                    <?php echo $filme['GENEROS']; ?>
+                    <?php echo htmlspecialchars($filme['GENEROS']); ?>
                   <?php else : ?>
-                    <?php echo 'Gênero não disponível'; ?>
+                    Gênero não disponível
                   <?php endif; ?>
                 </p>
-
-                <?php
-                $filmeUrl = 'detalahemnto5.php'; // página padrão para IDs não mapeados
-                switch ($filme['ID_FILME']) {
-                  case 5:
-                    $filmeUrl = '../View/detalhamento5.php';
-                    break;
-                  case 12:
-                    $filmeUrl = '../View/detalhamento12.php';
-                    break;
-                  case 13:
-                    $filmeUrl = '../View/detalhamento13.php';
-                    break;
-                  case 15:
-                    $filmeUrl = '../View/detalhamento15.php';
-                    break;
-                  case 18:
-                    $filmeUrl = '../View/detalhamento18.php';
-                    break;
-                  case 55:
-                    $filmeUrl = '../View/detalhamento55.php';
-                    break;
-                  case 62:
-                    $filmeUrl = '../View/detalhamento62.php';
-                    break;
-                  case 66:
-                    $filmeUrl = '../View/detalhamento66.php';
-                    break;
-                  case 69:
-                    $filmeUrl = '../View/detalhamento69.php';
-                    break;
-                  case 71:
-                    $filmeUrl = '../View/detalhamento71.php';
-                    break;
-                }
-                ?>
-
-                <a href="<?php echo $filmeUrl; ?>">Clique para saber mais</a>
+                <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
               </div>
             <?php endforeach; ?>
-          </div>
+          <?php else : ?>
+            <p>Nenhum filme de ação disponível no momento.</p>
+          <?php endif; ?>
+        </div>
+      </div>
 
-          <h1 id="p">Dramas Coreanos</h1>
-          <div class="movieBlock">
-            <div class="movies-scroller">
-              <?php foreach ($filmes as $filme) : ?>
-                <div class="moviebox">
-                  <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
-                    <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
+      <h1 id="p">Filmes de Comedia</h1>
+      <div class="movieBlock">
+        <div class="movies-scroller">
+          <?php
+
+          $sql = "SELECT ID_FILME, TITLE, ANO_LANCAMENTO, SINOPSE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS WHERE GENEROS = 'Comedy'";
+          $result = $conn->query($sql);
+          $filmes = array();
+
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              $filmes[] = $row;
+            }
+          }
+          ?>
+
+          <?php if (!empty($filmes)) : ?>
+            <?php foreach ($filmes as $filme) : ?>
+              <div class="moviebox">
+                <?php if (isset($filme['CAMINHO_POSTER'])) : ?><img src="<?php echo 'https://image.tmdb.org/t/p/w500' . $filme['CAMINHO_POSTER']; ?>" />
+
+                <?php endif; ?>
+                <h1 class="movieMiniName">
+                  <?php if (isset($filme['TITLE'])) : ?>
+                    <?php echo htmlspecialchars($filme['TITLE']); ?>
+                  <?php else : ?>
+                    Título não disponível
                   <?php endif; ?>
-
-                  <h1 class="movieMiniName">
-                    <?php if (isset($filme['TITLE'])) : ?>
-                      <?php echo $filme['TITLE']; ?>
-                    <?php else : ?>
-                      <?php echo 'Título não disponível'; ?>
-                    <?php endif; ?>
-                  </h1>
-
-                  <p class="movieGenre">
-                    <?php if (isset($filme['GENEROS'])) : ?>
-                      <?php echo $filme['GENEROS']; ?>
-                    <?php else : ?>
-                      <?php echo 'Gênero não disponível'; ?>
-                    <?php endif; ?>
-                  </p>
-
-                  <?php
-                  $filmeUrl = 'detalahemnto5.php'; // página padrão para IDs não mapeados
-                  switch ($filme['ID_FILME']) {
-                    case 5:
-                      $filmeUrl = '../View/detalhamento5.php';
-                      break;
-                    case 12:
-                      $filmeUrl = '../View/detalhamento12.php';
-                      break;
-                    case 13:
-                      $filmeUrl = '../View/detalhamento13.php';
-                      break;
-                    case 15:
-                      $filmeUrl = '../View/detalhamento15.php';
-                      break;
-                    case 18:
-                      $filmeUrl = '../View/detalhamento18.php';
-                      break;
-                    case 55:
-                      $filmeUrl = '../View/detalhamento55.php';
-                      break;
-                    case 62:
-                      $filmeUrl = '../View/detalhamento62.php';
-                      break;
-                    case 66:
-                      $filmeUrl = '../View/detalhamento66.php';
-                      break;
-                    case 69:
-                      $filmeUrl = '../View/detalhamento69.php';
-                      break;
-                    case 71:
-                      $filmeUrl = '../View/detalhamento71.php';
-                      break;
-                  }
-                  ?>
-
-                  <a href="<?php echo $filmeUrl; ?>">Clique para saber mais</a>
-                </div>
-              <?php endforeach; ?>
-            </div>
-
-            <h1 id="p">Filmes de Ação</h1>
-            <div class="movieBlock">
-              <div class="movies-scroller">
-                <?php foreach ($filmes as $filme) : ?>
-                  <div class="moviebox">
-                    <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
-                      <img height="350" width="350" src="<?php echo $filme['CAMINHO_POSTER']; ?>" />
-                    <?php endif; ?>
-
-                    <h1 class="movieMiniName">
-                      <?php if (isset($filme['TITLE'])) : ?>
-                        <?php echo $filme['TITLE']; ?>
-                      <?php else : ?>
-                        <?php echo 'Título não disponível'; ?>
-                      <?php endif; ?>
-                    </h1>
-
-                    <p class="movieGenre">
-                      <?php if (isset($filme['GENEROS'])) : ?>
-                        <?php echo $filme['GENEROS']; ?>
-                      <?php else : ?>
-                        <?php echo 'Gênero não disponível'; ?>
-                      <?php endif; ?>
-                    </p>
-
-                    <?php
-                    $filmeUrl = 'detalahemnto5.php'; // página padrão para IDs não mapeados
-                    switch ($filme['ID_FILME']) {
-                      case 5:
-                        $filmeUrl = '../View/detalhamento5.php';
-                        break;
-                      case 12:
-                        $filmeUrl = '../View/detalhamento12.php';
-                        break;
-                      case 13:
-                        $filmeUrl = '../View/detalhamento13.php';
-                        break;
-                      case 15:
-                        $filmeUrl = '../View/detalhamento15.php';
-                        break;
-                      case 18:
-                        $filmeUrl = '../View/detalhamento18.php';
-                        break;
-                      case 55:
-                        $filmeUrl = '../View/detalhamento55.php';
-                        break;
-                      case 62:
-                        $filmeUrl = '../View/detalhamento62.php';
-                        break;
-                      case 66:
-                        $filmeUrl = '../View/detalhamento66.php';
-                        break;
-                      case 69:
-                        $filmeUrl = '../View/detalhamento69.php';
-                        break;
-                      case 71:
-                        $filmeUrl = '../View/detalhamento71.php';
-                        break;
-                    }
-                    ?>
-
-                    <a href="<?php echo $filmeUrl; ?>">Clique para saber mais</a>
-                  </div>
-                <?php endforeach; ?>
+                </h1>
+                <p class="movieGenre">
+                  <?php if (isset($filme['GENEROS'])) : ?>
+                    <?php echo htmlspecialchars($filme['GENEROS']); ?>
+                  <?php else : ?>
+                    Gênero não disponível
+                  <?php endif; ?>
+                </p>
+                <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
               </div>
+            <?php endforeach; ?>
+          <?php else : ?>
+            <p>Nenhum filme de ação disponível no momento.</p>
+          <?php endif; ?>
+        </div>
+      </div>
 
+      <h1 id="p">Filmes de Terror</h1>
+      <div class="movieBlock">
+        <div class="movies-scroller">
+          <?php
+          $sql = "SELECT ID_FILME, TITLE, ANO_LANCAMENTO, SINOPSE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS WHERE GENEROS = 'Horror'";
+          $result = $conn->query($sql);
+          $filmes = array();
 
-            </div>
+          if ($result->num_rows > 0) {
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-            <script>
-              AOS.init();
-            </script>
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            while ($row = $result->fetch_assoc()) {
+              $filmes[] = $row;
+            }
+          }
+          ?>
+
+          <?php if (!empty($filmes)) : ?>
+            <?php foreach ($filmes as $filme) : ?>
+              <div class="moviebox">
+                <?php if (isset($filme['CAMINHO_POSTER'])) : ?><img src="<?php echo 'https://image.tmdb.org/t/p/w500' . $filme['CAMINHO_POSTER']; ?>" />
+
+                <?php endif; ?>
+                <h1 class="movieMiniName">
+                  <?php if (isset($filme['TITLE'])) : ?>
+                    <?php echo htmlspecialchars($filme['TITLE']); ?>
+                  <?php else : ?>
+                    Título não disponível
+                  <?php endif; ?>
+                </h1>
+                <p class="movieGenre">
+                  <?php if (isset($filme['GENEROS'])) : ?>
+                    <?php echo htmlspecialchars($filme['GENEROS']); ?>
+                  <?php else : ?>
+                    Gênero não disponível
+                  <?php endif; ?>
+                </p>
+                <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+              </div>
+            <?php endforeach; ?>
+          <?php else : ?>
+            <p>Nenhum filme de ação disponível no momento.</p>
+          <?php endif; ?>
+        </div>
+      </div>
+
+      <h1 id="p">Filmes de Drama</h1>
+      <div class="movieBlock">
+        <div class="movies-scroller">
+          <?php
+          $sql = "SELECT ID_FILME, TITLE, ANO_LANCAMENTO, SINOPSE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS WHERE GENEROS = 'Drama'";
+          $result = $conn->query($sql);
+
+          $filmes = array();
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              $filmes[] = $row;
+            }
+          }
+          ?>
+
+          <?php if (!empty($filmes)) : ?>
+            <?php foreach ($filmes as $filme) : ?>
+              <div class="moviebox">
+                <?php if (isset($filme['CAMINHO_POSTER'])) : ?><img src="<?php echo 'https://image.tmdb.org/t/p/w500' . $filme['CAMINHO_POSTER']; ?>" />
+
+                <?php endif; ?>
+                <h1 class="movieMiniName">
+                  <?php if (isset($filme['TITLE'])) : ?>
+                    <?php echo htmlspecialchars($filme['TITLE']); ?>
+                  <?php else : ?>
+                    Título não disponível
+                  <?php endif; ?>
+                </h1>
+                <p class="movieGenre">
+                  <?php if (isset($filme['GENEROS'])) : ?>
+                    <?php echo htmlspecialchars($filme['GENEROS']); ?>
+                  <?php else : ?>
+                    Gênero não disponível
+                  <?php endif; ?>
+                </p>
+                <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+              </div>
+            <?php endforeach; ?>
+          <?php else : ?>
+            <p>Nenhum filme de ação disponível no momento.</p>
+          <?php endif; ?>
+        </div>
+      </div>
+
+      <h1 id="p">Filmes de Velho Oeste</h1>
+      <div class="movieBlock">
+        <div class="movies-scroller">
+          <?php
+          $sql = "SELECT ID_FILME, TITLE, ANO_LANCAMENTO, SINOPSE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS WHERE GENEROS = 'Western'";
+          $result = $conn->query($sql);
+          $filmes = array();
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              $filmes[] = $row;
+            }
+          }
+          ?>
+
+          <?php if (!empty($filmes)) : ?>
+            <?php foreach ($filmes as $filme) : ?>
+              <div class="moviebox">
+                <?php if (isset($filme['CAMINHO_POSTER'])) : ?><img src="<?php echo 'https://image.tmdb.org/t/p/w500' . $filme['CAMINHO_POSTER']; ?>" />
+
+                <?php endif; ?>
+                <h1 class="movieMiniName">
+                  <?php if (isset($filme['TITLE'])) : ?>
+                    <?php echo htmlspecialchars($filme['TITLE']); ?>
+                  <?php else : ?>
+                    Título não disponível
+                  <?php endif; ?>
+                </h1>
+                <p class="movieGenre">
+                  <?php if (isset($filme['GENEROS'])) : ?>
+                    <?php echo htmlspecialchars($filme['GENEROS']); ?>
+                  <?php else : ?>
+                    Gênero não disponível
+                  <?php endif; ?>
+                </p>
+                <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+              </div>
+            <?php endforeach; ?>
+          <?php else : ?>
+            <p>Nenhum filme de ação disponível no momento.</p>
+          <?php endif; ?>
+        </div>
+      </div>
+
+      <h1 id="p">Filmes de Romance</h1>
+<div class="movieBlock">
+  <div class="movies-scroller">
+    <?php
+    $sql = "SELECT ID_FILME, TITLE, ANO_LANCAMENTO, SINOPSE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS WHERE GENEROS = 'Romance,Drama'";
+    $result = $conn->query($sql);
+
+    $filmes = array();
+ 
+    if ($result->num_rows > 0) {
+    
+        while ($row = $result->fetch_assoc()) {
+            $filmes[] = $row;
+        }
+    }
+    ?>
+
+    <?php if (!empty($filmes)) : ?>
+      <?php foreach ($filmes as $filme) : ?>
+        <div class="moviebox">
+          <?php if (isset($filme['CAMINHO_POSTER'])) : ?><img src="<?php echo 'https://image.tmdb.org/t/p/w500' . $filme['CAMINHO_POSTER']; ?>" />
+
+          <?php endif; ?>
+          <h1 class="movieMiniName">
+            <?php if (isset($filme['TITLE'])) : ?>
+              <?php echo htmlspecialchars($filme['TITLE']); ?>
+            <?php else : ?>
+              Título não disponível
+            <?php endif; ?>
+          </h1>
+          <p class="movieGenre">
+            <?php if (isset($filme['GENEROS'])) : ?>
+              <?php echo htmlspecialchars($filme['GENEROS']); ?>
+            <?php else : ?>
+              Gênero não disponível
+            <?php endif; ?>
+          </p>
+          <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+        </div>
+      <?php endforeach; ?>
+    <?php else : ?>
+      <p>Nenhum filme de ação disponível no momento.</p>
+    <?php endif; ?>
+  </div>
+</div>
+
+<h1 id="p">Filmes de Fantasia</h1>
+<div class="movieBlock">
+  <div class="movies-scroller">
+    <?php
+    $sql = "SELECT ID_FILME, TITLE, ANO_LANCAMENTO, SINOPSE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS WHERE GENEROS = 'Fantasy,Action'";
+    $result = $conn->query($sql);
+    $filmes = array();
+    if ($result->num_rows > 0) {
+    
+        while ($row = $result->fetch_assoc()) {
+            $filmes[] = $row;
+        }
+    }
+    ?>
+
+    <?php if (!empty($filmes)) : ?>
+      <?php foreach ($filmes as $filme) : ?>
+        <div class="moviebox">
+          <?php if (isset($filme['CAMINHO_POSTER'])) : ?><img src="<?php echo 'https://image.tmdb.org/t/p/w500' . $filme['CAMINHO_POSTER']; ?>" />
+
+          <?php endif; ?>
+          <h1 class="movieMiniName">
+            <?php if (isset($filme['TITLE'])) : ?>
+              <?php echo htmlspecialchars($filme['TITLE']); ?>
+            <?php else : ?>
+              Título não disponível
+            <?php endif; ?>
+          </h1>
+          <p class="movieGenre">
+            <?php if (isset($filme['GENEROS'])) : ?>
+              <?php echo htmlspecialchars($filme['GENEROS']); ?>
+            <?php else : ?>
+              Gênero não disponível
+            <?php endif; ?>
+          </p>
+          <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+        </div>
+      <?php endforeach; ?>
+    <?php else : ?>
+      <p>Nenhum filme de ação disponível no momento.</p>
+    <?php endif; ?>
+  </div>
+</div>
+
+<h1 id="p">Filmes de Ficção cientifica</h1>
+<div class="movieBlock">
+  <div class="movies-scroller">
+    <?php
+    $sql = "SELECT ID_FILME, TITLE, ANO_LANCAMENTO, SINOPSE, GENEROS, CAMINHO_POSTER FROM VW_FILMES_GENEROS WHERE GENEROS = 'Science Fiction'";
+    $result = $conn->query($sql);
+
+    $filmes = array();
+    if ($result->num_rows > 0) {
+     
+        while ($row = $result->fetch_assoc()) {
+            $filmes[] = $row;
+        }
+    }
+    ?>
+
+    <?php if (!empty($filmes)) : ?>
+      <?php foreach ($filmes as $filme) : ?>
+        <div class="moviebox">
+          <?php if (isset($filme['CAMINHO_POSTER'])) : ?><img src="<?php echo 'https://image.tmdb.org/t/p/w500' . $filme['CAMINHO_POSTER']; ?>" />
+
+          <?php endif; ?>
+          <h1 class="movieMiniName">
+            <?php if (isset($filme['TITLE'])) : ?>
+              <?php echo htmlspecialchars($filme['TITLE']); ?>
+            <?php else : ?>
+              Título não disponível
+            <?php endif; ?>
+          </h1>
+          <p class="movieGenre">
+            <?php if (isset($filme['GENEROS'])) : ?>
+              <?php echo htmlspecialchars($filme['GENEROS']); ?>
+            <?php else : ?>
+              Gênero não disponível
+            <?php endif; ?>
+          </p>
+          <a href="detalhamento.php?id=<?php echo urlencode($filme['ID_FILME']); ?>">Clique para saber mais</a>
+        </div>
+      <?php endforeach; ?>
+    <?php else : ?>
+      <p>Nenhum filme de ação disponível no momento.</p>
+    <?php endif; ?>
+  </div>
+</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
