@@ -79,19 +79,5 @@ $filme = $filmeController->detalhes($id);
             </div>
         </div>
     </main>
-    <footer>
-        <div class="footer-section">
-            <h2>Filmes Relacionados</h2>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <div class="carousel-item">
-                    <?php if (isset($filme['CAMINHO_POSTER'])) : ?>
-                        <img src="<?php echo 'https://image.tmdb.org/t/p/w500' . $filme['CAMINHO_POSTER']; ?>" />
-          <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
