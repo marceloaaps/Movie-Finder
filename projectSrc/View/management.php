@@ -23,48 +23,46 @@ require_once '../DAO/database/buscar_filmes.php';
 
 
 <body id="background">
-  <header>
-    <div class="site-name">Movie Finder</div>
-    <nav>
-      <a href="landing.html" class="categoria">Landing Page</a>
-      <a href="management.html" class="cadastro">Gestão</a>
-      <a href="#" class="suporte">Meu Perfil</a>
-      <a href="#" class="suporte"><a href="perfil.php"><?php echo $user['NOME'];?></a> </a>
+<header>
+  <div class="site-name">Movie Finder</div>
+  <nav>
+    <a href="landing.php" class="categoria home-page">Home Page</a>
+    <div class="right-section">
+      <a href="#" class="suporte"><a href="perfil.php"><?php echo $user['NOME'];?></a></a>
       <a href="../Controller/logout.php">Sair</a>
-      <div class="search-box">
-        <input type="text" placeholder="Digite aqui">
-        <a href="#"><i class="fas fa-search"></i></a>
-      </div>
-    </nav>
-  </header>
-
-<body id="background">
-  <div id="container">
-    <div class="containerThings">
-
-      <h1 class="p2">Gestão de Filmes</h1>
-      <div class="boxesSearch">
-        <h1 id="p">Ano de Lançamento: </h1>
-        <textarea class="boxText" placeholder="Inicial"></textarea>
-        <h1 class="h1H">-</h1>
-        <textarea class="boxText" placeholder="Final"></textarea>
-        <button class="btnDate">Enviar</button>
-      </div>
-      <table id="dataTable">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Título</th>
-            <th>Gênero</th>
-            <th>Data</th>
-            <th>Descrição</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Rows will be inserted here by JavaScript -->
-        </tbody>
-      </table>
+      <form method="POST" class="search-box" action="resultadoBusca.php">
+        <input type="text" name="busca" placeholder="Digite aqui">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
     </div>
+  </nav>
+</header>
+
+    <div id="container">
+      <div class="containerThings">
+
+        <h1 class="p2">Gestão de Filmes</h1>
+        <div class="boxesSearch">
+          <h1 id="p">Ano de Lançamento: </h1>
+          <textarea class="boxText" placeholder="Inicial"></textarea>
+          <h1 class="h1H">-</h1>
+          <textarea class="boxText" placeholder="Final"></textarea>
+          <button class="btnDate">Enviar</button>
+        </div>
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Gênero</th>
+              <th>Data</th>
+              <th>Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
 </body>
 
 </html>
