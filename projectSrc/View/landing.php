@@ -37,7 +37,7 @@ require_once '../DAO/database/buscar_filmes.php';
                     </form>
                 </div>
             </nav>
-        </header>
+  </header>
 
 
 
@@ -118,7 +118,7 @@ require_once '../DAO/database/buscar_filmes.php';
   </div>
 
   <div class="containerThings" data-aos="fade-right">
-    <h1 class="p2" data-aos="fade-up">Boa noite, <?php echo $user['NOME']; ?></h1>
+    <h1 class="p2" data-aos="fade-up">Boa noite, <?php echo $user['NOME']; ?>!</h1>
     <div class="movieBlock">
       <h1 id="p">Filmes de Ação</h1>
       <div class="movieBlock">

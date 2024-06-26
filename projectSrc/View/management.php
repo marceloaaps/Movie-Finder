@@ -1,14 +1,25 @@
 <!-- Feito por Marcelo -->
 <?php
+require_once '../DAO/BuscaHeap.php';
 require_once '../Controller/auth_check.php';
 require_once '../DAO/database/db_connect.php';
 require_once '../DAO/DadosUsuario.php';
 require_once '../DAO/database/buscar_filmes.php';
+
+
+$start_year = isset($_POST['start_year']) ? intval($_POST['start_year']) : 2000;
+$end_year = isset($_POST['end_year']) ? intval($_POST['end_year']) : 2020;
+
+$films = fetch_films_by_year_range($conn, $start_year, $end_year);
+
+$start_time = microtime(true);
+heap_sort($films);
+$end_time = microtime(true);
+$execution_time = $end_time - $start_time;
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,38 +31,37 @@ require_once '../DAO/database/buscar_filmes.php';
   <script src="js/script.js"></script>
   <title>Gestão Safadosflix</title>
 </head>
-
-
 <body id="background">
 <header>
-  <div class="site-name">Movie Finder</div>
-  <nav>
-    <a href="landing.php" class="categoria home-page">Home Page</a>
-    <a href="management.php" class="categoria management">Gestão</a>
-    <div class="right-section">
-      <a href="#" class="suporte"><a href="perfil.php"><?php echo $user['NOME'];?></a></a>
-      <a href="../Controller/logout.php">Sair</a>
-      <form method="POST" class="search-box" action="resultadoBusca.php">
-        <input type="text" name="busca" placeholder="Digite aqui">
-        <button type="submit"><i class="fas fa-search"></i></button>
-      </form>
-    </div>
-  </nav>
-</header>
+            <div class="site-name">Movie Finder</div>
+            <nav>
+                <div class="left-section">
+                    <a href="landing.php" class="categoria home-page">Home Page</a>
+                    <a href="management.php" class="categoria home-page">Gestão</a>
+                </div>
+                <div class="right-section">
+                    <a href="perfil.php"><?php echo $user['NOME'];?></a>
+                    <a href="../Controller/logout.php">Sair</a>
+                    <form method="POST" class="search-box" action="resultadoBusca.php">
+                        <input type="text" name="busca" placeholder="Digite aqui">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </nav>
+  </header>
 
-
-
-    <div id="container">
-      <div class="containerThings">
-        <h1 class="p2">Gestão de Filmes</h1>
-        <div class="boxesSearch">
+  <div id="container">
+    <div class="containerThings">
+      <h1 class="p2">Gestão de Filmes</h1>
+        <form class="boxesSearch" method="POST" action="">
           <h1 id="p">Ano de Lançamento: </h1>
           <textarea class="boxText" name="start_year" placeholder="Inicial"><?php echo $start_year; ?></textarea>
           <h1 class="h1H">-</h1>
           <textarea class="boxText" name="end_year" placeholder="Final"><?php echo $end_year; ?></textarea>
+          <p class="procTime">Tempo de processamento: <?php echo $execution_time; ?> segundos</p>
           <button class="btnDate" type="submit">Enviar</button>
-        </div>
-        <table id="dataTable" class="table table-striped">
+        </form>
+      <table class="dataTable">
         <thead>
           <tr>
             <th>ID</th>
@@ -62,27 +72,18 @@ require_once '../DAO/database/buscar_filmes.php';
           </tr>
         </thead>
         <tbody>
-          <?php if (!empty($films)): ?>
-            <?php foreach ($films as $film): ?>
-              <tr>
-                <td><?php echo htmlspecialchars($film['ID_FILME']); ?></td>
-                <td><?php echo htmlspecialchars($film['TITLE']); ?></td>
-                <td><?php echo htmlspecialchars($film['GENEROS']); ?></td>
-                <td><?php echo htmlspecialchars($film['ANO_LANCAMENTO']); ?></td>
-                <td><?php echo htmlspecialchars($film['SINOPSE']); ?></td>
-              </tr>
-            <?php endforeach; ?>
-          <?php else: ?>
-            <tr>
-              <td colspan="5">Nenhum filme encontrado.</td>
+          <?php foreach ($films as $film): ?>
+            <tr class="table">
+              <td><?php echo htmlspecialchars($film['ID_FILME']); ?></td>
+              <td><?php echo htmlspecialchars($film['TITLE']); ?></td>
+              <td><?php echo htmlspecialchars($film['GENEROS']); ?></td>
+              <td><?php echo htmlspecialchars($film['ANO_LANCAMENTO']); ?></td>
+              <td><?php echo htmlspecialchars($film['SINOPSE']); ?></td>
             </tr>
-          <?php endif; ?>
+          <?php endforeach; ?>
         </tbody>
       </table>
-      <p>Tempo de processamento: <?php echo number_format($execution_time, 4); ?> segundos</p>
-      </div>
+    </div>
+  </div>
 </body>
-
 </html>
-
-

@@ -28,7 +28,6 @@ header nav {
 }
 
 header nav .home-page {
-  margin-right: auto; /* Alinha o "Home Page" à esquerda */
   color: #fff;
   margin-left: 20px; /* Espaçamento entre os itens */
   text-decoration: none;
