@@ -2,7 +2,7 @@
 // Define as credenciais do servidor de banco de dados
 $servername = "localhost"; // Endereço do servidor MySQL
 $username = "root";        // Nome de usuário do MySQL
-$password = "Admin-123456"; // Senha do usuário MySQL
+$password = "1234"; // Senha do usuário MySQL
 $dbname = "CINEMINHA";     // Nome do banco de dados
 
 // Criando a conexão
