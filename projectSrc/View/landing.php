@@ -49,7 +49,7 @@ require_once '../DAO/database/buscar_filmes.php';
           <div class="infos">
             <h1 class="movieName">Scarface</h1>
             <p class="movieText">Scarface foi indicado a três Globos de Ouro: melhor ator de drama (Al Pacino), melhor coadjuvante de drama (Steven Bauer) e melhor trilha sonora original (Giorgio Moroder). A produção ficou em 10º lugar na lista dos dez melhores filmes de gângster do American Film Institute.</p>
-            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'">
+            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.php?id=111'">
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                 </path>
@@ -70,7 +70,7 @@ require_once '../DAO/database/buscar_filmes.php';
           <div class="infos">
             <h1 class="movieName">The Hunger Games</h1>
             <p class="movieText">A história é estabelecida em um período distópico pós-apocalíptico na nação de Panem, onde meninos e meninas de 12 a 18 anos devem participar dos Jogos Vorazes, um evento anual televisionado no qual os "tributos" precisam lutar até a morte até que sobre apenas um, que é coroado vencedor.</p>
-            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'">
+            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.php?id=131634'">
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                 </path>
@@ -91,7 +91,7 @@ require_once '../DAO/database/buscar_filmes.php';
           <div class="infos">
             <h1 class="movieName">Pulp Fiction</h1>
             <p class="movieText">Assassino que trabalha para a máfia se apaixona pela esposa de seu chefe quando é convidado a acompanhá-la, um boxeador descumpre sua promessa de perder uma luta e um casal tenta um assalto que rapidamente sai do controle.</p>
-            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.html'">
+            <button class="animated-button" id="buttonSM" onclick="window.location.href='detalhamento.php?id=680'">
               <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                 </path>
