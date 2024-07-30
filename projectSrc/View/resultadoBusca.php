@@ -1,6 +1,6 @@
 <?php
 require_once '../Controller/auth_check.php';
-require_once '../DAO/database/db_connect.php';
+require_once '../DAO/db_connect.php';
 require_once '../DAO/DadosUsuario.php';
 require_once '../DAO/BuscarFilmes.php';
 

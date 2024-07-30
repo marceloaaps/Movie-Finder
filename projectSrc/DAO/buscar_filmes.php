@@ -1,6 +1,6 @@
 <?php
 // Define as credenciais do servidor de banco de dados
-require_once '../DAO/database/db_connect.php';
+require_once '../DAO/db_connect.php';
 
 // Criando a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);

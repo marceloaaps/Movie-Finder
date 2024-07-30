@@ -2,9 +2,9 @@
 <?php
 require_once '../DAO/BuscaHeap.php';
 require_once '../Controller/auth_check.php';
-require_once '../DAO/database/db_connect.php';
+require_once '../DAO/db_connect.php';
 require_once '../DAO/DadosUsuario.php';
-require_once '../DAO/database/buscar_filmes.php';
+require_once '../DAO/buscar_filmes.php';
 
 
 $start_year = isset($_POST['start_year']) ? intval($_POST['start_year']) : 2000;

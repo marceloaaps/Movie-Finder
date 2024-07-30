@@ -1,5 +1,5 @@
 <?php
-    require_once '../DAO/database/db_connect.php';
+    require_once '../DAO/db_connect.php';
     require_once '../Controller/auth_check.php';
     require_once '../DAO/DadosUsuario.php';
     $id_usuario = $user['ID_USUARIO'];

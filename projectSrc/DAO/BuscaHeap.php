@@ -1,5 +1,5 @@
 <?php
-require_once '../DAO/database/db_connect.php';
+require_once '../DAO/db_connect.php';
 
 
 $pesquisa = $_POST['busca'];

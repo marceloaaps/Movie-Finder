@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela login</title>
-    <link rel="stylesheet" href="./projectSrc/View/css/login_page.css">
+    <link rel="stylesheet" href="../movieFinder/projectSrc/View/css/login_page.css">
 </head>
 
 <body>
     <main class="apresentacao">
         <section class="login_form">
-            <form action="../Controller/LoginController.php" method="POST">
+            <form action="../movieFinder/projectSrc/Controller/LoginController.php" method="POST">
                 <h1>FAÇA SEU LOGIN AQUI</h1>
                 <div class="email_form">
                     <label for="email">E-mail:</label>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-cds">
                         <label>Não tem cadastro?</label>
-                        <a href="../projectSrc/View/cadastro.html">Clique aqui para se registrar</a>
+                        <a href="../movieFinder/projectSrc/View/cadastro.html">Clique aqui para se registrar</a>
                     </div>
                 </div>
                 </div>

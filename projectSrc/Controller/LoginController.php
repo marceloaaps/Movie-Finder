@@ -1,5 +1,5 @@
 <?php
-require_once '../DAO/database/db_connect.php';
+require_once '../DAO/db_connect.php';
 require_once '../DAO/UsuarioDAO.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
@@ -24,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
             header('Location: ../View/landing.php');
             exit();
         } else {
-            header('Location: ../View/login.php');
+            header('Location: ../login.php');
         }
     } else {
-        header('Location: ../View/login.php');
+        header('Location: ../login.php');
 
     }
 }

@@ -1,5 +1,5 @@
 <?php
-require_once '../DAO/database/db_connect.php';
+require_once '../DAO/db_connect.php';
 require_once '../Model/Usuario.php';
 require_once '../DAO/UsuarioDAO.php';
 
